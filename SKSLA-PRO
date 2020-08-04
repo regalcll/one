@@ -1,0 +1,51 @@
+[custom]
+;不要随意改变关键字，否则会导致出错
+;acl4SSR规则（EasyJsM提取自制）
+
+;去广告：支持
+;自动测速：不支持
+;微软分流：支持
+;苹果分流：支持
+;增强中国IP段：支持
+;增强国外GFW：支持
+
+;设置规则标志位
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+surge_ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+surge_ruleset=🍃 应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+surge_ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+surge_ruleset=🛡️ 隐私防护,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+surge_ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+surge_ruleset=🎯 全球直连,[]GEOIP,CN
+surge_ruleset=🐟 漏网之鱼,[]FINAL
+;设置规则标志位
+
+;设置分组标志位
+custom_proxy_group=🚀 节点选择`select`[]🇭🇰 深港IPLC`[]🇭🇰 上港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]🇭🇰 深港IPLC`[]🇭🇰 上港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`
+custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
+custom_proxy_group=🍃 应用净化`select`[]REJECT`[]DIRECT
+custom_proxy_group=🆎 AdBlock`select`[]REJECT`[]DIRECT
+custom_proxy_group=🛡️ 隐私防护`select`[]REJECT`[]DIRECT
+custom_proxy_group=🇭🇰 深港IPLC`load-balance`(深.*港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 上港IPLC`load-balance`(上.*港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 京港IPLC`load-balance`(北.*港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 深新IPLC`load-balance`(深.*坡)`http://www.gstatic.com/generate_204`600
+
+;设置分组标志位
+
+enable_rule_generator=true
+overwrite_original_rules=true
+
+clash_rule_base=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GeneralClashConfig.yml
+
+;luck
