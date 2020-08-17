@@ -19,14 +19,14 @@ surge_ruleset=Final,[]MATCH
 
 ;设置分组标志位
 
-custom_proxy_group=Proxy`select`[]DIRECT`[]🚀 HK`[]🚀 SG`
+custom_proxy_group=Proxy`select`[]🚀 HK`[]🚀 SG`
 custom_proxy_group=Apple`select`[]DIRECT`[]🚀 HK`
-custom_proxy_group=Telegram`select`[]Proxy`[]🚀 HK`[]🚀 SG`
 custom_proxy_group=Netease`select`[]DIRECT`
-custom_proxy_group=Youtube`select`[]Proxy`[]🚀 HK`
-custom_proxy_group=Netflix`select`[]Proxy`[]🚀 HK`[]🚀 SG`
 custom_proxy_group=HKMTMedia`select`[]DIRECT`[]Proxy`[]🚀 HK`
-custom_proxy_group=GlobalMedia`select`[]Proxy`[]🚀 HK`[]🚀 SG`
+custom_proxy_group=Telegram`select`[]Proxy`[]🚀 HK`[]🚀 SG`
+custom_proxy_group=Youtube`select`[]Proxy`[]🚀 HK`[]🚀 SG`
+custom_proxy_group=Netflix`select`[]Proxy`[]🚀 HK`[]🚀 SG`
+custom_proxy_group=GlobalMedia`select`[]🚀 HK`[]🚀 SG`
 custom_proxy_group=Final`select`[]Proxy`[]DIRECT
 custom_proxy_group=🚀 HK`select`港`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🚀 SG`select`新加坡|狮城`http://www.gstatic.com/generate_204`600
