@@ -20,14 +20,14 @@ surge_ruleset=Final,[]MATCH
 
 ;设置分组标志位
 
-custom_proxy_group=Proxy`select`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
+custom_proxy_group=Proxy`select`[]DIRECT`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
 custom_proxy_group=Apple`select`[]DIRECT`[]🚀 HK`
 custom_proxy_group=Netease`select`[]DIRECT`
 custom_proxy_group=HKMTMedia`select`[]DIRECT`[]Proxy`[]🚀 HK`[]🚀 TW`
-custom_proxy_group=Telegram`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
-custom_proxy_group=Youtube`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
-custom_proxy_group=Netflix`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
-custom_proxy_group=GlobalMedia`select`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
+custom_proxy_group=Telegram`select`[]DIRECT`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
+custom_proxy_group=Youtube`select`[]DIRECT`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
+custom_proxy_group=Netflix`select`[]DIRECT`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
+custom_proxy_group=GlobalMedia`select`[]DIRECT`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 KR`[]🚀 US`
 custom_proxy_group=Final`select`[]Proxy`[]DIRECT
 custom_proxy_group=🚀 HK`select`(港|HK|Hong Kong)`
 custom_proxy_group=🚀 TW`select`(台|新北|彰化|TW|Taiwan)`
