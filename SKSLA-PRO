@@ -20,14 +20,14 @@ surge_ruleset=Final,[]MATCH
 
 ;设置分组标志位
 
-custom_proxy_group=Proxy`select`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=Proxy`select`[]DIRECT`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
 custom_proxy_group=Apple`select`[]DIRECT`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
 custom_proxy_group=Netease`select`[]DIRECT`
 custom_proxy_group=HKMTMedia`select`[]DIRECT`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
-custom_proxy_group=Telegram`select`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
-custom_proxy_group=Youtube`select`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
-custom_proxy_group=Netflix`select`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
-custom_proxy_group=GlobalMedia`select`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=Telegram`select`[]DIRECT`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=Youtube`select`[]DIRECT`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=Netflix`select`[]DIRECT`[]Proxy`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
+custom_proxy_group=GlobalMedia`select`[]DIRECT`[]🇭🇰 香港AGA`[]🇭🇰 深港IPLC`[]🇭🇰 沪港IPLC`[]🇭🇰 京港IPLC`[]🇸🇬 深新IPLC`
 custom_proxy_group=Final`select`[]Proxy`[]DIRECT
 custom_proxy_group=🇭🇰 香港AGA`load-balance`Hong Kong`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇭🇰 深港IPLC`load-balance`(深.*港)`http://www.gstatic.com/generate_204`600
