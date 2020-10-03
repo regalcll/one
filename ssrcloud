@@ -29,9 +29,9 @@ custom_proxy_group=Netflix`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 J
 custom_proxy_group=GlobalMedia`select`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=Final`select`[]Proxy`[]DIRECT
 custom_proxy_group=🚀 HK`load-balance`油尖旺`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🚀 TW`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 TW`load-balance`(台湾.*?IEPL)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🚀 SG`load-balance`(新|新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🚀 JP`load-balance`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🚀 US`load-balance`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 JP`load-balance`(中国-日本)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 US`load-balance`(美国.*?萨克)`http://www.gstatic.com/generate_204`600
 
 ;设置分组标志位
