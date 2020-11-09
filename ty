@@ -1,10 +1,9 @@
 #分流规则为在线获取，更新最及时，但可能会出现更新失败等故障
-surge_ruleset=🎵 网易云,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
-surge_ruleset=🎵 网易云,https://raw.githubusercontent.com/We1eVen/Subfile/master/netease.list
+
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Unbreak.list
-surge_ruleset=📹 YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-surge_ruleset=📲 Telegram,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+surge_ruleset=📹 油管,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+surge_ruleset=📲 电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 surge_ruleset=🔰 PROXY,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
 surge_ruleset=🔰 PROXY,rules/PROXY.list
 surge_ruleset=🛑 拦截,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list
@@ -16,13 +15,12 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
 ;surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
 surge_ruleset=DIRECT,[]GEOIP,CN
-surge_ruleset=🐟 规则外,[]FINAL
+surge_ruleset=🐟 Others,[]FINAL
 
 custom_proxy_group=🔰 PROXY``load-balance`(港|HK|Hong Kong)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🐟 规则外`select`[]🔰 PROXY`[]DIRECT`
-custom_proxy_group=📲 Telegram`select`[]🔰 PROXY`[]DIRECT`
-custom_proxy_group=📹 YouTube`select`[]🔰 PROXY`[]DIRECT`
-custom_proxy_group=🎵 网易云`select`(网易|音乐|Music|NetEase|netease|Netease)`[]DIRECT`
+custom_proxy_group=🐟 Others`select`[]🔰 PROXY`[]DIRECT`
+custom_proxy_group=📲 电报`select`[]🔰 PROXY`[]DIRECT`
+custom_proxy_group=📹 油管`select`[]🔰 PROXY`[]DIRECT`
 custom_proxy_group=🧩 Emby`select`[]🔰 PROXY`[]DIRECT`
 custom_proxy_group=🍎 苹果`select`[]🔰 PROXY`[]DIRECT`
 custom_proxy_group=🛑 拦截`select`[]REJECT`[]DIRECT
