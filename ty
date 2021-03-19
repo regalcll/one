@@ -17,7 +17,7 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 surge_ruleset=DIRECT,[]GEOIP,CN
 surge_ruleset=🐟 Others,[]FINAL
 
-custom_proxy_group=🔰 PROXY``load-balance`(港|HK|Hong Kong|H.*?K)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🔰 PROXY``load-balance`(新|新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🐟 Others`select`[]🔰 PROXY`[]DIRECT`
 custom_proxy_group=📲 电报`select`[]🔰 PROXY`[]DIRECT`
 custom_proxy_group=📹 油管`select`[]🔰 PROXY`[]DIRECT`
