@@ -2,7 +2,6 @@
 surge_ruleset=DIRECT,rules/NobyDa/Surge/Download.list
 surge_ruleset=REJECT,rules/ConnersHua/Surge/Ruleset/Hijacking.list
 surge_ruleset=Apple,rules/ConnersHua/Surge/Ruleset/Apple.list
-surge_ruleset=Netease,rules/lhie1/Surge3/Netease Music.list
 surge_ruleset=Telegram,rules/ConnersHua/Surge/Ruleset/Telegram.list
 surge_ruleset=Youtube,rules/ConnersHua/Surge/Ruleset/Media/YouTube.list
 surge_ruleset=Netflix,rules/ConnersHua/Surge/Ruleset/Media/Netflix.list
@@ -21,17 +20,16 @@ surge_ruleset=Final,[]MATCH
 
 custom_proxy_group=Proxy`select`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=Apple`select`[]DIRECT`[]🚀 HK`[]🚀 US`
-custom_proxy_group=Netease`select`[]DIRECT`[]🚀 HK`
 custom_proxy_group=HKMTMedia`select`[]DIRECT`[]Proxy`[]🚀 HK`[]🚀 TW`
 custom_proxy_group=Telegram`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=Youtube`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=Netflix`select`[]Proxy`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=GlobalMedia`select`[]🚀 HK`[]🚀 TW`[]🚀 SG`[]🚀 JP`[]🚀 US`
 custom_proxy_group=Final`select`[]Proxy`[]DIRECT
-custom_proxy_group=🚀 HK`select`(港|HK|Hong Kong)`
-custom_proxy_group=🚀 TW`select`(台|新北|彰化|TW|Taiwan)`
-custom_proxy_group=🚀 SG`select`(新|新加坡|坡|狮城|SG|Singapore)`
-custom_proxy_group=🚀 JP`select`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`
-custom_proxy_group=🚀 US`select`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`
+custom_proxy_group=🚀 HK`load-balance`(港|HK|Hong Kong)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 TW`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 SG`load-balance`(新|新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 JP`load-balance`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🚀 US`load-balance`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`http://www.gstatic.com/generate_204`600
 
 ;设置分组标志位
