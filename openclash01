@@ -1,15 +1,43 @@
 [custom]
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-surge_ruleset=🚀 全局设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-surge_ruleset=🎯 国内网站设置,https://cdn.staticaly.com/gh/ACL4SSR/ACL4SSR/master/Clash/Download.list
-surge_ruleset=🎯 国内网站设置,[]GEOIP,CN
 
-custom_proxy_group=🚀 全局设置`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🎯 国内网站设置`select`[]DIRECT`[]🚀 全局设置`
+;设置规则标志位
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+ruleset=🍃 应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+ruleset=🆎 AdBlock,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+ruleset=🛡️ 隐私防护,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+ruleset=🍎 苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+ruleset=🌏 国内媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=✈️ 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+ruleset=✈️ 节点选择,https://raw.githubusercontent.com/hope140/Clash/beta/Proxy.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=🎯 全球直连,https://raw.githubusercontent.com/hope140/Clash/beta/Direct.list
+ruleset=🎯 全球直连,[]GEOIP,CN
+ruleset=🐟 漏网之鱼,[]FINAL
+;设置规则标志位
+
+;设置分组标志位
+custom_proxy_group=✈️ 节点选择`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🌍 国外媒体`select`[]✈️ 节点选择`[]DIRECT`
+custom_proxy_group=🌏 国内媒体`select`[]✈️ 节点选择`[]DIRECT`
+custom_proxy_group=🍎 苹果服务`select`[]✈️ 节点选择`[]DIRECT`
+custom_proxy_group=🐟 漏网之鱼`select`[]✈️ 节点选择`[]DIRECT`
+custom_proxy_group=🎯 全球直连`select`[]✈️ 节点选择`[]DIRECT`
+custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
+custom_proxy_group=🍃 应用净化`select`[]REJECT`[]DIRECT
+custom_proxy_group=🆎 AdBlock`select`[]REJECT`[]DIRECT
+custom_proxy_group=🛡️ 隐私防护`select`[]REJECT`[]DIRECT
+;设置分组标志位
+
 enable_rule_generator=true
 overwrite_original_rules=true
+
+;clash_rule_base=https://raw.githubusercontent.com/hope140/Clash/beta/GeneralClashConfig.yml
