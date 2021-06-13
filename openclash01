@@ -25,7 +25,7 @@ ruleset=🐟 漏网之鱼,[]FINAL
 ;设置规则标志位
 
 ;设置分组标志位
-custom_proxy_group=✈️ 节点选择`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=✈️ 节点选择`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🌍 国外媒体`select`[]✈️ 节点选择`[]DIRECT`
 custom_proxy_group=🌏 国内媒体`select`[]✈️ 节点选择`[]DIRECT`
 custom_proxy_group=🍎 苹果服务`select`[]✈️ 节点选择`[]DIRECT`
