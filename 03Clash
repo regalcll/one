@@ -26,17 +26,17 @@ ruleset=漏网之鱼,[]FINAL
 ;设置规则标志位
 
 ;设置分组标志位
-custom_proxy_group=节点选择`select`[]香港`[]台湾`[]狮城`[]日本`[]🇺美国`
+custom_proxy_group=节点选择`select`[]香港`[]台湾`[]狮城`[]日本`[]美国`
 custom_proxy_group=香港`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=台湾`load-balance`(台|新北|彰化|TW|Taiwan)``http://www.gstatic.com/generate_204`600
 custom_proxy_group=狮城`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=日本`load-balance`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=美国`load-balance`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=漏网之鱼`select`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]🇺美国`
-custom_proxy_group=国外媒体`select`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]🇺美国`
+custom_proxy_group=漏网之鱼`select`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]美国`
+custom_proxy_group=国外媒体`select`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]美国`
 custom_proxy_group=国内媒体`select`[]DIRECT`[]节点选择`
-custom_proxy_group=Emby`select`[]DIRECT`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]🇺美国`
-custom_proxy_group=苹果服务`select`[]DIRECT`[]节点选择`[]香港`[]🇺美国`
+custom_proxy_group=Emby`select`[]DIRECT`[]节点选择`[]香港`[]台湾`[]狮城`[]日本`[]美国`
+custom_proxy_group=苹果服务`select`[]DIRECT`[]节点选择`[]香港`[]美国`
 custom_proxy_group=全球直连`select`[]DIRECT`[]节点选择`
 custom_proxy_group=广告拦截`select`[]REJECT`[]DIRECT
 custom_proxy_group=应用净化`select`[]REJECT`[]DIRECT
