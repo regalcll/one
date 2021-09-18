@@ -4,8 +4,10 @@ enable_rule_generator=true
 overwrite_original_rules=true
 
 ruleset=DIRECT,https://raw.githubusercontent.com/tindy2013/subconverter/master/base/rules/LocalAreaNetwork.list
+ruleset=Emby,https://gist.github.com/jklolixxs/29541b1f34deb1340d25b2a75182471d/raw/Proxy.ini
 ruleset=AdBlock,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Reject.list
 ruleset=Netflix,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list
+ruleset=YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
 ruleset=Speedtest,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Speedtest.list
 ruleset=Microsoft,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list
@@ -18,7 +20,9 @@ ruleset=Others,[]MATCH
 
 custom_proxy_group=Proxies`select`[]HK`[]TW`[]SG`[]JP`[]US`
 custom_proxy_group=Others`select`[]HK`[]TW`[]SG`[]JP`[]US`
+custom_proxy_group=YouTube`select`[]HK`[]TW`[]SG`[]JP`[]US`
 custom_proxy_group=Netflix`select`[]HK`[]TW`[]SG`[]JP`[]US`
+custom_proxy_group=Emby`select`[]HK`[]TW`[]SG`[]JP`[]US`[]DIRECT`
 custom_proxy_group=Telegram`select`[]HK`[]TW`[]SG`[]JP`[]US`
 custom_proxy_group=Speedtest`select`[]Proxies`[]Domestic`
 custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxies
