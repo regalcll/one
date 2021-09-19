@@ -1,6 +1,6 @@
 [custom]
 
-ruleset=⏳ 各测速网站,https://raw.githubusercontent.com/jklolixxs/listes/master/Clash/Ruleset/Speedtest.list
+ruleset=⏳ 测速网站,https://raw.githubusercontent.com/jklolixxs/listes/master/Clash/Ruleset/Speedtest.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
 ruleset=🛑 广告拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
@@ -28,7 +28,7 @@ custom_proxy_group=🐟 漏网之鱼`select`[]🚀 Proxy`[]DIRECT
 custom_proxy_group=📲 电报消息`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📹 油管视频`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🎥 奈飞视频`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=⏳ 各测速网站`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`[]DIRECT`
+custom_proxy_group=⏳ 测速网站`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`[]DIRECT`
 custom_proxy_group=🌍 国外媒体`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🌏 国内媒体`select`[]DIRECT`[]🚀 Proxy`
 custom_proxy_group=Ⓜ️ 微软服务`select`[]DIRECT`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇺🇲 United States`
