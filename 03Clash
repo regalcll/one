@@ -27,7 +27,7 @@ ruleset=🎯 全球直连,[]GEOIP,CN
 ruleset=🐟 漏网之鱼,[]FINAL
 
 custom_proxy_group=🚀 Proxy`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=🐟 漏网之鱼`select`[]🚀 Choose Proxy`[]DIRECT
+custom_proxy_group=🐟 漏网之鱼`select`[]🚀 Proxy`[]DIRECT
 custom_proxy_group=🇭🇰 Hong Kong`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇨🇳 Taiwan`load-balance`(台|新北|彰化|TW|Taiwan)``http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇸🇬 Singapore`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
