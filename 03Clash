@@ -1,6 +1,5 @@
 [custom]
 
-ruleset=🧩 Emby,https://gist.github.com/jklolixxs/29541b1f34deb1340d25b2a75182471d/raw/Proxy.ini
 ruleset=⏳ 各测速网站,https://raw.githubusercontent.com/jklolixxs/listes/master/Clash/Ruleset/Speedtest.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
@@ -14,8 +13,6 @@ ruleset=🍎 苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/mast
 ruleset=📲 电报消息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 ruleset=📹 油管视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 ruleset=🎥 奈飞视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
-ruleset=🖥 Twitch,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Twitch.list
-ruleset=🔞 Pornhub,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Pornhub.list
 ruleset=🌏 国内媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
 ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
@@ -36,12 +33,9 @@ custom_proxy_group=🇺🇲 United States`load-balance`(美|波特兰|达拉斯|
 custom_proxy_group=📲 电报消息`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📹 油管视频`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🎥 奈飞视频`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=🔞 Pornhub`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=🖥 Twitch`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=⏳ 各测速网站`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`[]DIRECT`
 custom_proxy_group=🌍 国外媒体`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🌏 国内媒体`select`[]DIRECT`[]🚀 Proxy`
-custom_proxy_group=🧩 Emby`select`[]DIRECT`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=Ⓜ️ 微软服务`select`[]DIRECT`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇺🇲 United States`
 custom_proxy_group=🍎 苹果服务`select`[]DIRECT`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇺🇲 United States`
 custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 Proxy`
