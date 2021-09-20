@@ -38,8 +38,8 @@ custom_proxy_group=🛑 广告拦截`select`[]REJECT`[]DIRECT
 custom_proxy_group=🍃 应用净化`select`[]REJECT`[]DIRECT
 custom_proxy_group=🆎 AdBlock`select`[]REJECT`[]DIRECT
 custom_proxy_group=🛡️ 隐私防护`select`[]REJECT`[]DIRECT
-custom_proxy_group=🇭🇰 Hong Kong`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🇸🇬 Singapore`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 Hong Kong`url-test`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 Singapore`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
 
 
 enable_rule_generator=true
