@@ -11,9 +11,8 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/
 surge_ruleset=DIRECT,[]GEOIP,CN
 surge_ruleset=Proxies,[]MATCH
 ;设置规则标志位
-
 ;设置分组标志位
-custom_proxy_group=Proxies`select`[]🇭🇰 HK1.0`[]🇭🇰 HK1.2`[]🇭🇰 HK1.5`[]🇬 SG1.0`
+custom_proxy_group=Proxies`select`[]🇭🇰 HK1.0`[]🇭🇰 HK1.2`[]🇭🇰 HK1.5`[]🇸🇬 SG1.0`
 custom_proxy_group=Netflix`select`[]Proxies`[]DIRECT`
 custom_proxy_group=Streaming`select`[]Proxies`[]DIRECT`
 custom_proxy_group=StreamingSE`select`[]DIRECT`[]Proxies`
