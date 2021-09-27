@@ -13,11 +13,11 @@ surge_ruleset=Proxies,[]MATCH
 ;设置规则标志位
 
 ;设置分组标志位
-custom_proxy_group=Proxies`select`[]HK`[]TW`[]SG`[]JP`[]US`
-custom_proxy_group=Netflix`select`[]Proxies`[]HK`[]TW`[]SG`[]JP`[]US`
-custom_proxy_group=Streaming`select`[]Proxies`[]HK`[]TW`[]SG`[]JP`[]US`
-custom_proxy_group=StreamingSE`select`[]DIRECT`[]HK`[]TW
-custom_proxy_group=Apple`select`[]DIRECT`[]Proxies`[]HK`[]US
+custom_proxy_group=Proxies`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇲 US`
+custom_proxy_group=Netflix`select`[]Proxies`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇲 US`
+custom_proxy_group=Streaming`select`[]Proxies`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇲 US`
+custom_proxy_group=StreamingSE`select`[]DIRECT`[]🇭🇰 HK`[]🇨🇳 TW`
+custom_proxy_group=Apple`select`[]DIRECT`[]Proxies`[]🇭🇰 HK`[]🇺🇲 US`
 custom_proxy_group=🇭🇰 HK`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇨🇳 TW`load-balance`(台|新北|彰化|TW|Taiwan)``http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇸🇬 SG`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
