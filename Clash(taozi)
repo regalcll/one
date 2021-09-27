@@ -22,4 +22,6 @@ custom_proxy_group=🇭🇰 HK1.2`load-balance`(1.2.*?香港)`http://www.gstatic
 custom_proxy_group=🇭🇰 HK1.5`load-balance`(1.5.*?香港)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇸🇬 SG1.0`load-balance`(新加坡[3-9])`http://www.gstatic.com/generate_204`600
 
+
+
 ;设置分组标志位
