@@ -1,47 +1,23 @@
-[custom]
-;不要随意改变关键字，否则会导致出错
-;acl4SSR规则
-
-;去广告：支持
-;增强中国IP段：支持
-;增强国外GFW：支持
-
+;设置规则标志位
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list
+surge_ruleset=REJECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Guard/Advertising.list
+surge_ruleset=Netflix,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
+surge_ruleset=Streaming,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
+surge_ruleset=StreamingSE,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
+surge_ruleset=Apple,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
+surge_ruleset=Proxies,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list
+surge_ruleset=DIRECT,[]GEOIP,CN
+surge_ruleset=Proxies,[]MATCH
 ;设置规则标志位
 
-ruleset=📲 电报消息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-ruleset=📹 油管视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-ruleset=🎥 奈飞视频,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
-ruleset=🌏 国内媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
-ruleset=🌍 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
-ruleset=🎯 全球直连,[]GEOIP,CN
-ruleset=🐟 漏网之鱼,[]FINAL
-
 ;设置分组标志位
-
-custom_proxy_group=🚀 节点选择`select`[]🇭🇰 香港`[]🇸🇬 狮城`
-custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]DIRECT`
-custom_proxy_group=📲 电报消息`select`[]🚀 节点选择`[]🇭🇰 香港`[]🇸🇬 狮城`
-custom_proxy_group=📹 油管视频`select`[]🚀 节点选择`[]🇭🇰 香港`[]🇸🇬 狮城`
-custom_proxy_group=🎥 奈飞视频`select`[]🚀 节点选择`[]🇭🇰 香港`[]🇸🇬 狮城`
-custom_proxy_group=🌍 国外媒体`select`[]🚀 节点选择`[]🇭🇰 香港`[]🇸🇬 狮城`
-custom_proxy_group=🌏 国内媒体`select`[]DIRECT`[]🚀 节点选择`
-custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`
-custom_proxy_group=🇭🇰 香港`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🇸🇬 狮城`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
-
+custom_proxy_group=Proxies`select`[]HK`[]SG`
+custom_proxy_group=Netflix`select`[]Proxies`[]HK`[]SG`
+custom_proxy_group=Streaming`select`[]Proxies`[]HK`[]SG`
+custom_proxy_group=StreamingSE`select`[]DIRECT`[]HK`
+custom_proxy_group=Apple`select`[]Proxies`[]DIRECT`[]HK`
+custom_proxy_group=HK`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=SG`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
 ;设置分组标志位
-
-enable_rule_generator=true
-overwrite_original_rules=true
-
-;clash_rule_base=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GeneralClashConfig.yml
-
-;luck
