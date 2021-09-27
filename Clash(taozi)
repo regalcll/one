@@ -20,6 +20,6 @@ custom_proxy_group=Apple`select`[]Proxies`[]DIRECT`
 custom_proxy_group=🇭🇰 HK1.0`load-balance`(1.0.*?香港)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇭🇰 HK1.2`load-balance`(1.2.*?香港)`http://www.gstatic.com/generate_204`600
 custom_proxy_group=🇭🇰 HK1.5`load-balance`(1.5.*?香港)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🇸🇬 SG1.0`load-balance`(03~09新加坡)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 SG1.0`load-balance`([3-9]新加坡)`http://www.gstatic.com/generate_204`600
 
 ;设置分组标志位
