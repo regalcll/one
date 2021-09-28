@@ -26,11 +26,12 @@ surge_ruleset=🐟 漏网之鱼,[]FINAL
 ;设置规则标志位
 
 ;设置分组标志位
-custom_proxy_group=🚀 节点选择`select`[]🇭🇰 香港1.0倍率`[]🇭🇰 香港1.5倍率`
+custom_proxy_group=🚀 节点选择`select`[]🇭🇰 HK(微)`[]🇭🇰 HK(杭)`[]🇸🇬 SG(微)`
 custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]🎯 全球直连
 custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择
-custom_proxy_group=🇭🇰 香港1.0倍率`load-balance`(1.0.*?香港)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🇭🇰 香港1.5倍率`load-balance`(1.5.*?香港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 HK(微)`load-balance`(港微.*?香港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 HK(杭)`load-balance`(杭港.*?香港)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 SG(微)`load-balance`(港微.*?新加坡)`http://www.gstatic.com/generate_204`600
 
 
 enable_rule_generator=true
