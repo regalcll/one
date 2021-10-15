@@ -27,7 +27,7 @@ ruleset=🐟 漏网之鱼,[]FINAL
 
 ;设置分组标志位
 custom_proxy_group=🚀 节点选择`select`[]🌍 负载`[]🇸🇬 狮城`[]🇰🇷 韩国`[]🇯🇵 日本`
-custom_proxy_group=🌍 负载`load-balance`(负载)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🌍 负载`select`(负载)`
 custom_proxy_group=🇸🇬 狮城`load-balance`(狮城.*?4)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇰🇷 韩国`load-balance`(汉城)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇯🇵 日本`load-balance`(大阪.*?4x)`http://www.gstatic.com/generate_204`300,,50
