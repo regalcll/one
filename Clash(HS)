@@ -38,8 +38,8 @@ custom_proxy_group=🎥 奈飞视频`select`[]🇭🇰 香港`[]🇸🇬 狮城`
 custom_proxy_group=🌍 国外媒体`select`[]🇭🇰 香港`[]🇸🇬 狮城`
 custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`
 custom_proxy_group=🐟 漏网之鱼`select`[]🚀 节点选择`[]DIRECT`
-custom_proxy_group=🇭🇰 香港`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
-custom_proxy_group=🇸🇬 狮城`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇭🇰 香港`url-test`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 狮城`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
 ;设置分组标志位
 
 enable_rule_generator=true
