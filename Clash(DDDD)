@@ -28,7 +28,7 @@ ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/mast
 ruleset=🎯 全球直连,[]GEOIP,CN
 ruleset=🐟 漏网之鱼,[]FINAL
 ;设置分组标志位
-custom_proxy_group=🚀 节点选择`select`[]🇨🇳 台湾`[]🇸🇬 狮城`[]🇸🇯🇵 日本`
+custom_proxy_group=🚀 节点选择`select`[]🇨🇳 台湾`[]🇸🇬 狮城`[]🇯🇵 日本`
 custom_proxy_group=📲 电报消息`select`[]🇨🇳 台湾`[]🇸🇬 狮城`[]🇯🇵 日本`
 custom_proxy_group=🌍 国外媒体`select`[]🇨🇳 台湾`[]🇸🇬 狮城`[]🇯🇵 日本`
 custom_proxy_group=🎯 全球直连`select`[]DIRECT`[]🚀 节点选择`
