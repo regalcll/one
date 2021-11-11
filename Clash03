@@ -11,9 +11,9 @@ ruleset=📲 Im,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_relate
 ;国外媒体
 
 ruleset=📹 YouTube,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/YouTube.list
-ruleset=🎥 NETFLIX,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/Netflix.list
-ruleset=🎥 NETFLIX,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/NetflixIP.list
-ruleset=🎥 NETFLIX,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/AmazonIp.list
+ruleset=🎥 Netflix,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/Netflix.list
+ruleset=🎥 Netflix,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/NetflixIP.list
+ruleset=🎥 Netflix,https://cdn.jsdelivr.net/gh/flyhigherpi/merlinclash_clash_related/Rules/ACL4SSR/Clash/Ruleset/AmazonIp.list
 ruleset=🌍 Streaming,[]DOMAIN-SUFFIX,starplus.com
 ruleset=🌍 Streaming,[]DOMAIN-SUFFIX,starott.com
 ruleset=🌍 Streaming,https://raw.githubusercontent.com/regalcll/one/master/emby.list
@@ -160,7 +160,7 @@ ruleset=🐟 Final,[]FINAL
 custom_proxy_group=🚀 Proxy`select`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📲 Im`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📹 YouTube`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=🎥 NETFLIX`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
+custom_proxy_group=🎥 Netflix`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🌍 Streaming`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`[]🇨🇳 Taiwan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🎯 Direct`select`[]DIRECT`[]🚀 Proxy`
 custom_proxy_group=🐟 Final`select`[]🚀 Proxy`[]DIRECT`
