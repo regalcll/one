@@ -1,11 +1,4 @@
 [custom]
-;不要随意改变关键字，否则会导致出错
-;常规规则
-
-;直连规则
-ruleset=DIRECT,[]DOMAIN-SUFFIX,msftncsi.com
-ruleset=DIRECT,[]DOMAIN-SUFFIX,msftconnecttest.com
-ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 
 ;聊天软件
 
@@ -81,6 +74,9 @@ ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clas
 
 ;国内网站
 
+ruleset=🎯 Direct,[]DOMAIN-SUFFIX,msftncsi.com
+ruleset=🎯 Direct,[]DOMAIN-SUFFIX,msftconnecttest.com
+ruleset=🎯 Direct,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=🎯 Direct,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Apple.list
 ruleset=🎯 Direct,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AppleNews.list
 ruleset=🎯 Direct,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AppleTV.list
