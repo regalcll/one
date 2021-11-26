@@ -141,12 +141,12 @@ ruleset=🎯 Direct,[]DOMAIN-KEYWORD,aria2
 ruleset=🎯 Direct,[]GEOIP,CN
 ruleset=🐟 Final,[]FINAL
 
-custom_proxy_group=🚀 Proxy`select`*
-custom_proxy_group=📲 Chat`select`*
-custom_proxy_group=📹 YouTube`select`*
-custom_proxy_group=🎥 Netflix`select`*
-custom_proxy_group=🦄 Disney+`select`*
-custom_proxy_group=🌍 Stream`select`*
+custom_proxy_group=🚀 Proxy`select`.*
+custom_proxy_group=📲 Chat`select`.*
+custom_proxy_group=📹 YouTube`select`.*
+custom_proxy_group=🎥 Netflix`select`.*
+custom_proxy_group=🦄 Disney+`select`.*
+custom_proxy_group=🌍 Stream`select`.*
 custom_proxy_group=🎯 Direct`select`[]DIRECT`[]🚀 Proxy`
 custom_proxy_group=🐟 Final`select`[]🚀 Proxy`[]DIRECT`
 
