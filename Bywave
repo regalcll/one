@@ -41,7 +41,7 @@ ruleset=🎯 Direct,[]GEOIP,CN
 ruleset=🐟 Final,[]FINAL
 
 custom_proxy_group=🚀 Proxy`select`[]🇭🇰 Hong Kong`
-custom_proxy_group=📲 Chat`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`
+custom_proxy_group=📲 Telegram`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`
 custom_proxy_group=📹 YouTube`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`
 custom_proxy_group=🎥 Netflix`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`
 custom_proxy_group=🦄 Disney+`select`[]🚀 Proxy`[]🇭🇰 Hong Kong`
