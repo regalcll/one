@@ -3,7 +3,6 @@
 ;节点选择
 
 ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
-ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 
 ;国外媒体
 
