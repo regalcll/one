@@ -1,12 +1,12 @@
 ;设置规则标志位
 
-surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list
-surge_ruleset=REJECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Guard/Advertising.list
 surge_ruleset=🎥 Netflix,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
 surge_ruleset=📺 Streaming,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
-surge_ruleset=🎬StreamingSE,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
-surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
+surge_ruleset=🎬 StreamingSE,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
 surge_ruleset=🚀 Proxies,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list
+surge_ruleset=REJECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Guard/Advertising.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list
 surge_ruleset=DIRECT,[]GEOIP,CN
