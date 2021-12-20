@@ -1,25 +1,24 @@
 ;设置规则标志位
 
-ruleset=🚀 Proxy,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Streaming.list
-ruleset=🚀 Proxy,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Global.list
-ruleset=🚀 Proxy,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/force-proxy.list
-ruleset=🚀 Proxy,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Telegram.list
-ruleset=📺 Streaming,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Streaming.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/force-direct.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Apple.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/microsoft.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/media/netease.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/StreamingSE.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/local.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/Unbreak.list
-ruleset=DIRECT,https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/ruleset/external/DivineEngine/Surge/China.list
-ruleset=DIRECT,[]GEOIP,CN
-ruleset=🚀 Proxy,[]MATCH
+surge_ruleset=🎥 Netflix,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
+surge_ruleset=📺 Streaming,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
+surge_ruleset=🎬 StreamingSE,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
+surge_ruleset=🚀 Proxies,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list
+surge_ruleset=DIRECT,[]GEOIP,CN
+surge_ruleset=🚀 Proxies,[]MATCH
 
-;设置规则标志位
+;设置分组标志位
 
-custom_proxy_group=🚀 Proxy`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG`
-custom_proxy_group=📺 Streaming`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG`
+custom_proxy_group=🚀 Proxies`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG
+custom_proxy_group=🎥 Netflix`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG
+custom_proxy_group=📺 Streaming`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇸🇬 SG
+custom_proxy_group=🎬 StreamingSE`select`[]DIRECT`[]🇭🇰 HK`[]🇨🇳 TW`
 custom_proxy_group=🇭🇰 HK`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇨🇳 TW`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇸🇬 SG`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
+
+;设置分组标志位
