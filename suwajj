@@ -23,7 +23,7 @@ ruleset=🎯 Direct,[]GEOIP,CN
 ruleset=🐟 Final,[]FINAL
 
 
-custom_proxy_group=🚀 Proxy`load-balance`(v2.*?亚洲)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🚀 Proxy`select`(v2.*?亚洲)`
 custom_proxy_group=🎥 Netflix`select`[]🚀 Proxy`[]DIRECT`
 custom_proxy_group=📺 Streaming`select`[]🚀 Proxy`[]DIRECT`
 custom_proxy_group=🐟 Final`select`[]🚀 Proxy`[]DIRECT`
