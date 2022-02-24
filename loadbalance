@@ -23,12 +23,12 @@ ruleset=Direct,[]GEOIP,CN
 ruleset=Final,[]FINAL
 
 
-custom_proxy_group=Proxy`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`
-custom_proxy_group=Telegram`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`
-custom_proxy_group=Netflix`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`
-custom_proxy_group=Streaming`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`
-custom_proxy_group=Direct`select`[]DIRECT`[]🚀 Proxy`
-custom_proxy_group=Final`select`[]🚀 Proxy`[]DIRECT`
+custom_proxy_group=Proxy`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Telegram`select`[]Hong Kong`[]Tai Wan`[]🇸Singapore`
+custom_proxy_group=Netflix`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Streaming`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Direct`select`[]DIRECT`[]Proxy`
+custom_proxy_group=Final`select`[]Proxy`[]DIRECT`
 custom_proxy_group=Hong Kong`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=Tai Wan`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=Singapore`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
