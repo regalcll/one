@@ -24,7 +24,7 @@ ruleset=Final,[]FINAL
 
 
 custom_proxy_group=Proxy`select`[]Hong Kong`[]Tai Wan`[]Singapore`
-custom_proxy_group=Telegram`select`[]Hong Kong`[]Tai Wan`[]🇸Singapore`
+custom_proxy_group=Telegram`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Streaming`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Direct`select`[]DIRECT`[]Proxy`
