@@ -13,7 +13,7 @@
 ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 ruleset=🚀 Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
 ruleset=🎥 Netflix,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
-ruleset=📺 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=📹 TouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 ruleset=📺 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
 ruleset=📺 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=📺 StreamingSE,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
@@ -40,6 +40,7 @@ ruleset=🐟 Final,[]FINAL
 
 custom_proxy_group=🚀 Proxy`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🎥 Netflix`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
+custom_proxy_group=📹 TouTube`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📺 Streaming`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=📺 StreamingSE`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🍎 Apple`select`[]DIRECT`[]🇺🇲 United States`
