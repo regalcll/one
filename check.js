@@ -88,7 +88,7 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = 'YouTube:'
+    let youtube_check_result = 'YouTube :'
   
     await inner_check()
       .then((code) => {
@@ -144,7 +144,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = 'Netflix:'
+    let netflix_check_result = 'Netflix   :'
   
     await inner_check(81215567)
       .then((code) => {
@@ -167,10 +167,10 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁'
+          netflix_check_result    += '该节点不支持解锁'
           return
         }
-        netflix_check_result += '检测失败,请刷新面板'
+        netflix_check_result    += '检测失败,请刷新面板'
       })
   
     return netflix_check_result
