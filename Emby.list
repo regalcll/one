@@ -1,3 +1,6 @@
+# > NAME: Emby
+# > UPDATED: 2022-04-15 14:07:22
+
 # > 流媒体emby-nexitally服务器
 DOMAIN,emby.nexitally.com
 
@@ -82,6 +85,31 @@ DOMAIN,cf.jmsooo.com
 DOMAIN,hk.jmsooo.com
 DOMAIN,sg.jmsooo.com
 
+# > 流媒体卷毛鼠服务器
+DOMAIN,emby.wtf
+DOMAIN,pub1back.emby.wtf
+DOMAIN,pub2back.emby.wtf
+DOMAIN,pub3back.emby.wtf
+DOMAIN,pub1.emby.wtf
+DOMAIN,pub2.emby.wtf
+DOMAIN,pub3.emby.wtf
+
+# > 流媒体熊猫服务器
+DOMAIN,embyclub.com
+DOMAIN,az-hk.embyclub.com
+DOMAIN,azsgp.embyclub.com
+
+# > 流媒体卡戎服务器
+DOMAIN,play.charontv.com
+
+# > 流媒体大白服务器
+DOMAIN,emby.p-p.men
+
+# > 流媒体Garden of Avalon服务器
+DOMAIN,krcf.st8.one
+
+# > 流媒体哎哟喂の影视屋服务器
+DOMAIN,emby.aiyowei.ml
 
 # > MisakaF服务器
 DOMAIN,embygy.misakaf.xyz
