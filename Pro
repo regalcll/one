@@ -1,8 +1,8 @@
 [custom]
-ruleset=📲 Telegram,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/LiaoTianRuanJian.list
+ruleset=🚀 Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/LiaoTianRuanJian.list
 ruleset=🚀 Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/GuoWaiWangZhan.list
 ruleset=🎥 Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/NETFLIX.list
-ruleset=📹 YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
 ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=🌍 Streaming,https://raw.githubusercontent.com/regalcll/one/master/Emby.list
@@ -30,8 +30,6 @@ ruleset=DIRECT,[]GEOIP,CN
 ruleset=🚀 Proxy,[]MATCH
 
 custom_proxy_group=🚀 Proxy`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=📲 Telegram`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
-custom_proxy_group=📹 YouTube`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🎥 Netflix`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🌍 Streaming`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
 custom_proxy_group=🚀 SpeedTest`select`[]🇭🇰 Hong Kong`[]🇨🇳 Tai Wan`[]🇸🇬 Singapore`[]🇯🇵 Japan`[]🇺🇲 United States`
