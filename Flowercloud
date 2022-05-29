@@ -1,0 +1,40 @@
+[custom]
+
+ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/LiaoTianRuanJian.list
+ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/GuoWaiWangZhan.list
+ruleset=Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/NETFLIX.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=Streaming,https://raw.githubusercontent.com/regalcll/one/master/Emby.list
+ruleset=SpeedTest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/NetEaseMusic.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=DIRECT,[]GEOIP,CN
+ruleset=Proxy,[]MATCH
+
+custom_proxy_group=Proxy`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Netflix`select`(实验性)
+custom_proxy_group=Streaming`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=SpeedTest`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Hong Kong`load-balance`(香港.*?高级)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Tai Wan`load-balance`台湾.*?高级)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Singapore`load-balance`(新加坡.*?高级)`http://www.gstatic.com/generate_204`300,,50
+
+enable_rule_generator=true
+overwrite_original_rules=true
