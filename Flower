@@ -1,14 +1,12 @@
 [custom]
-ruleset=🚀 Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/LiaoTianRuanJian.list
-ruleset=🚀 Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/GuoWaiWangZhan.list
-ruleset=🎥 Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/NETFLIX.list
-ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
-ruleset=🌍 Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-ruleset=🌍 Streaming,https://raw.githubusercontent.com/regalcll/one/master/Emby.list
-ruleset=🚀 SpeedTest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
-ruleset=⛔ REJECT,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/QuanQiuLanJie.list
-ruleset=⛔ REJECT,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/YingYongLanJie.list
+ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/LiaoTianRuanJian.list
+ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/GuoWaiWangZhan.list
+ruleset=Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ZHANG/NETFLIX.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+ruleset=Streaming,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=Streaming,https://raw.githubusercontent.com/regalcll/one/master/Emby.list
+ruleset=SpeedTest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
@@ -27,13 +25,12 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
 ruleset=DIRECT,[]GEOIP,CN
-ruleset=🚀 Proxy,[]MATCH
+ruleset=Proxy,[]MATCH
 
-custom_proxy_group=🚀 Proxy`select`(实验)
-custom_proxy_group=🎥 Netflix`select`(实验)
-custom_proxy_group=🌍 Streaming`select`(实验)
-custom_proxy_group=🚀 SpeedTest`select`(实验)
-custom_proxy_group=⛔ REJECT`select`[]REJECT`[]DIRECT
+custom_proxy_group=Proxy`select`(实验)
+custom_proxy_group=Netflix`select`(实验)
+custom_proxy_group=Streaming`select`(实验)
+custom_proxy_group=SpeedTest`select`(实验)
 
 enable_rule_generator=true
 overwrite_original_rules=true
