@@ -50,8 +50,8 @@ custom_proxy_group=🌏 国内网站`select`[]DIRECT`[]🇭🇰 Hong Kong(BYG)`[
 custom_proxy_group=🐟 漏网之鱼`select`[]🇭🇰 Hong Kong(BYG)`[]🇸🇬 Singapore(BYG)`[]🇭🇰 Hong Kong(HY)`[]🇸🇬 Singapore(HY)`[]DIRECT
 custom_proxy_group=🇭🇰 Hong Kong(BYG)`select`(Hong Kong)
 custom_proxy_group=🇸🇬 Singapore(BYG)`select`(Singapore)
-custom_proxy_group=🇭🇰 Hong Kong(HY)`select`(实验.*?香港)
-custom_proxy_group=🇸🇬 Singapore(HY)`select`(实验.*?新加坡)
+custom_proxy_group=🇭🇰 Hong Kong(HY)`select`(香港.*?实验)
+custom_proxy_group=🇸🇬 Singapore(HY)`select`(新加坡.*?实验)
 
 enable_rule_generator=true
 overwrite_original_rules=true
