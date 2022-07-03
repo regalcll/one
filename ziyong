@@ -1,0 +1,44 @@
+[custom]
+
+ruleset=📲 聊天软件,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/LiaoTianRuanJian.list
+ruleset=🎬 YouTube,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
+ruleset=🎬 NETFLIX,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
+ruleset=🎬 Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
+ruleset=🎬 EMBY,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Emby.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/BaHaMuTe.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/HBO.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/HBO%20MAX.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/TikTok.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/PrimeVideo.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Spotify.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/RiHanMeiTi.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GangTaiMeiTI_2.list
+ruleset=🎬 国外媒体,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiMeiTi_2.list
+ruleset=🌏 国内网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/BilibiliHMT.list
+ruleset=🌏 国内网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/IqiyiHMT.list
+ruleset=🌏 国外网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiWangZhan.list
+ruleset=🌏 国外网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/WeiRuanFuWu.list
+ruleset=🌏 国外网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/AppleAll.list
+ruleset=🌏 国内网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YouXiPingTai.list
+ruleset=🌏 国内网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/PrivateTracker.list
+ruleset=🌏 国内网站,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoNeiWangZhan.list
+ruleset=🌏 国内网站,[]GEOIP,CN
+ruleset=🐟 漏网之鱼,[]MATCH
+
+custom_proxy_group=🚀 全球加速`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=📲 聊天软件`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🎬 YouTube`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🎬 NETFLIX`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🎬 Disney+`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🎬 EMBY`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🎬 国外媒体`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点
+custom_proxy_group=🌏 国外网站`select`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`
+custom_proxy_group=🌏 国内网站`select`[]DIRECT`[]🇭🇰 香港节点`[]🇸🇬 狮城节点`[]🇨🇳 台湾节点`[]🇯🇵 日本节点`[]🇺🇲 美国节点`
+custom_proxy_group=🇭🇰 香港节点`select`(港|HK|(?i)Hong)
+custom_proxy_group=🇸🇬 狮城节点`select`(新加坡|坡|狮城|SG|Singapore)
+custom_proxy_group=🇨🇳 台湾节点`select`(台|新北|彰化|TW|Taiwan)
+custom_proxy_group=🇯🇵 日本节点`select`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)
+custom_proxy_group=🇺🇲 美国节点`select`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+
+enable_rule_generator=true
+overwrite_original_rules=true
