@@ -32,7 +32,7 @@ custom_proxy_group=Proxy`select`[]Hong Kong`[]Singapore`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Singapore`
 custom_proxy_group=Streaming`select`[]Hong Kong`[]Singapore`
 custom_proxy_group=SpeedTest`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Hong Kong`url-test`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Hong Kong`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=Singapore`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
