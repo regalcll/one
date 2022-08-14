@@ -16,11 +16,11 @@ ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_re
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Microsoft.list
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/OneDrive.list
 ;聊天软件
-ruleset=Proxy,[]DOMAIN-KEYWORD,beetalk
-ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Telegram.list
-ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Whatsapp.list
-ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Line.list
-ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/KakaoTalk.list
+ruleset=Telegram,[]DOMAIN-KEYWORD,beetalk
+ruleset=Telegram,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Telegram.list
+ruleset=Telegram,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Whatsapp.list
+ruleset=Telegram,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Line.list
+ruleset=Telegram,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/KakaoTalk.list
 ;游戏平台
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Epic.list
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Sony.list
@@ -146,6 +146,7 @@ ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
 custom_proxy_group=Proxy`select`[]Hong Kong`[]Tai Wan`[]Singapore`
+custom_proxy_group=Telegram`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=YouTube`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Disney+`select`[]Hong Kong`[]Tai Wan`[]Singapore`
