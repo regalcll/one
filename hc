@@ -151,9 +151,9 @@ custom_proxy_group=YouTube`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Disney+`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Streaming`select`[]Hong Kong`[]Tai Wan`[]Singapore`
-custom_proxy_group=Hong Kong`fallback`[]HK(Flower)`[]HK(Texon)`http://www.gstatic.com/generate_204`300
-custom_proxy_group=Tai Wan`fallback`[]TW(Flower)`[]TW(Texon)`http://www.gstatic.com/generate_204`300
-custom_proxy_group=Singapore`fallback`[]SG(Flower)`[]SG(Texon)`http://www.gstatic.com/generate_204`300
+custom_proxy_group=Hong Kong`fallback`[]HK(Flower)`[]HK(Texon)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Tai Wan`fallback`[]TW(Flower)`[]TW(Texon)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Singapore`fallback`[]SG(Flower)`[]SG(Texon)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Flower)`load-balance`(香港.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Texon)`load-balance`((?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|高级)).)*$)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=TW(Flower)`load-balance`(台湾.*?高级)`http://www.gstatic.com/generate_204`300,,50
