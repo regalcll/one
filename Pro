@@ -28,10 +28,9 @@ ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_re
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/TencentLolm.list
 ruleset=Proxy,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Other/Games.list
 ;国外媒体
-ruleset=YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-ruleset=Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Netflix.list
-ruleset=Netflix,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/NetflixIP.list
-ruleset=Disney+,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/DisneyPlus.list
+ruleset=YouTube,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
+ruleset=Netflix,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
+ruleset=Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
 ruleset=Streaming,https://raw.githubusercontent.com/regalcll/one/master/Emby.list
 ruleset=Streaming,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/Niconico.list
 ruleset=Streaming,https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rules/ACL4SSR/Clash/Ruleset/HuluJapan.list
