@@ -32,15 +32,18 @@ custom_proxy_group=YouTube`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=Disney+`select`[]Hong Kong`[]Tai Wan`[]Singapore`
 custom_proxy_group=SpeedTest`select`[]Hong Kong`[]Tai Wan`[]Singapore`
-custom_proxy_group=Hong Kong`fallback`[]HK(Flower)`[]HK(Texon)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Tai Wan`fallback`[]TW(Flower)`[]TW(Texon)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Singapore`fallback`[]SG(Flower)`[]SG(Texon)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Hong Kong`fallback`[]HK(Flower)`[]HK(Texon)`[]HK(BYG)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Tai Wan`fallback`[]TW(Flower)`[]TW(Texon)`[]TW(BYG)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Singapore`fallback`[]SG(Flower)`[]SG(Texon)`[]SG(BYG)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Flower)`load-balance`(香港.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Texon)`load-balance`((?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|高级)).)*$)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=HK(BYG)`load-balance`(Hong Kong)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=TW(Flower)`load-balance`(台湾.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=TW(Texon)`load-balance`((?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美|实验|标准|高级)).)*$)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=TW(BYG)`load-balance`(Taiwan)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=SG(Flower)`load-balance`(新加坡.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=SG(Texon)`load-balance`((?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|实验|标准|高级)).)*$)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=SG(BYG)`load-balance`(Singapore)`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
