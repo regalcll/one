@@ -1,47 +1,26 @@
 [custom]
 
-ruleset=Telegram,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/LiaoTianRuanJian.list
-ruleset=YouTube,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
-ruleset=NETFLIX,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
-ruleset=Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/BaHaMuTe.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/HBO.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/HBO%20MAX.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Emby.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Spotify.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/RiHanMeiTi.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GangTaiMeiTI_2.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiMeiTi_2.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/TikTok.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/PrimeVideo.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiWangZhan.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/WeiRuanFuWu.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/AppleAll.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/PrivateTracker.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/BilibiliHMT.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/IqiyiHMT.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YouXiPingTai.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoNeiWangZhan.list
+ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Unbreak.list
+ruleset=Netflix,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
+ruleset=Streaming,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
+ruleset=StreamingSE,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
+ruleset=Proxies,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
+ruleset=Proxies,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/Global.list
+ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/China.list
+ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/Ruleset/LocalAreaNetwork.list
 ruleset=DIRECT,[]GEOIP,CN
-ruleset=Final,[]FINAL
+ruleset=Proxies,[]MATCH
 
-custom_proxy_group=Proxy`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Telegram`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=YouTube`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=NETFLIX`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Disney+`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Final`select`[]Hong Kong`[]Singapore`
+custom_proxy_group=Proxies`select`[]Hong Kong`[]Singapore`
+custom_proxy_group=Netflix`select`[]Hong Kong`[]Singapore`
+custom_proxy_group=Streaming`select`[]Hong Kong`[]Singapore`
+custom_proxy_group=StreamingSE`select`[]DIRECT`[]Proxies`
 custom_proxy_group=Hong Kong`url-test`[]HK(Texon)`[]HK(Flower)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=Singapore`url-test`[]SG(Texon)`[]SG(Flower)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Tai Wan`url-test`[]TW(Flower)`[]TW(BYG)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Flower)`load-balance`(香港.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=HK(Texon)`load-balance`((?=.*(港|HK))^((?!(台|日|韩|新|美|实验|标准|高级|Hong Kong)).)*$)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=SG(Flower)`load-balance`(新加坡.*?高级)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=SG(Texon)`load-balance`((?=.*(新|狮|獅|SG))^((?!(港|台|日|韩|美|实验|标准|高级|Singapore)).)*$)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=TW(Flower)`load-balance`(台湾.*?高级)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=TW(BYG)`load-balance`(Taiwan)`http://www.gstatic.com/generate_204`300,,50
-
-
 
 enable_rule_generator=true
 overwrite_original_rules=true
