@@ -20,9 +20,9 @@ custom_proxy_group=YouTube`select`[]Hong Kong`[]Singapore`[]Tai Wan`
 custom_proxy_group=Netflix`select`[]Hong Kong`[]Singapore`[]Tai Wan`
 custom_proxy_group=Disney+`select`[]Hong Kong`[]Singapore`[]Tai Wan`
 custom_proxy_group=SpeedTest`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=Hong Kong`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Singapore`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Tai Wan`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Hong Kong`url-test`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Singapore`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Tai Wan`url-test`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
