@@ -3,7 +3,7 @@
 ruleset=YouTube,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
 ruleset=Netflix,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
 ruleset=Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
-ruleset=SpeedTest,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
+ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
 ruleset=Telegram,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/LiaoTianRuanJian.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiMeiTi_2.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiWangZhan.list
@@ -14,15 +14,11 @@ ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
-custom_proxy_group=Proxy`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=Telegram`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=YouTube`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=Netflix`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=Disney+`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=SpeedTest`select`[]Hong Kong`[]Singapore`[]Tai Wan`
-custom_proxy_group=Hong Kong`url-test`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Singapore`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Tai Wan`url-test`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Proxy`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Telegram`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=YouTube`load-balance`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Netflix`load-balance`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Disney+`load-balance`(港|HK|(?i)Hong)`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
