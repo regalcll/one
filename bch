@@ -11,12 +11,10 @@ ruleset=DIRECT,https://raw.githubusercontent.com/AGWA5783/Profiles/master/Surge/
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxies,[]MATCH
 
-custom_proxy_group=Proxies`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Netflix`select`[]Hong Kong`[]Singapore`
-custom_proxy_group=Streaming`select`[]Hong Kong`[]Singapore`
+custom_proxy_group=Proxies`load-balance`((?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|xu|防失联)).)*$)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Netflix`load-balance`((?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|实验|标准|新西兰)).)*$)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=Streaming`load-balance`((?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|xu|防失联)).)*$)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=StreamingSE`select`[]DIRECT`[]Proxies`
-custom_proxy_group=Hong Kong`load-balance`((?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准)).)*$)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=Singapore`load-balance`((?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|实验|标准|新西兰)).)*$)`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
