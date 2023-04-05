@@ -1,13 +1,9 @@
 [custom]
 
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YouXiPingTai.list
 ruleset=Telegram,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/LiaoTianRuanJian.list
 ruleset=Netflix,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
 ruleset=Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/BaHaMuTe.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Emby.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GangTaiMeiTI_2.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiMeiTi_2.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiWangZhan.list
 ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/WeiRuanFuWu.list
