@@ -1,22 +1,24 @@
 [custom]
-
-ruleset=Telegram,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/LiaoTianRuanJian.list
-ruleset=Netflix,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/NETFLIX.list
-ruleset=Disney+,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/DisneyPlus.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/YOUTUBE.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiMeiTi_2.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoWaiWangZhan.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/WeiRuanFuWu.list
-ruleset=Proxy,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/AppleAll.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/PrivateTracker.list
-ruleset=DIRECT,https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/GuoNeiWangZhan.list
-ruleset=DIRECT,[]GEOIP,CN
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/WeChat.list
+surge_ruleset=Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Telegram/Telegram.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
+surge_ruleset=Netflix,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global.list
+surge_ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_Domain.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_Domain.list
+surge_ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
 custom_proxy_group=Proxy`select`[]HongKong`[]Singapore
 custom_proxy_group=Telegram`select`[]HongKong`[]Singapore
 custom_proxy_group=Netflix`select`[]HongKong`[]Singapore
-custom_proxy_group=Disney+`select`[]HongKong`[]Singapore
 custom_proxy_group=HongKong`load-balance`(港|Hong Kong)`http://www.gstatic.com/generate_204`600,,50
 custom_proxy_group=Singapore`load-balance`(新|新加坡|狮城|Singapore)`http://www.gstatic.com/generate_204`600,,50
 
