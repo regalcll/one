@@ -13,8 +13,8 @@ ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Su
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
-custom_proxy_group=Proxy`.* 
-custom_proxy_group=Media`.*
+custom_proxy_group=Proxy`select`.*
+custom_proxy_group=Media`select`.*
 
 enable_rule_generator=true
 overwrite_original_rules=true
