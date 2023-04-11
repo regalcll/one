@@ -1,7 +1,7 @@
 [custom]
 
 ruleset=Media,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
-ruleset=Media,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list
+ruleset=Telegram,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list
 ruleset=Proxy,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/DisneyPlus.list
 ruleset=Proxy,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/YouTube.list
 ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list
@@ -14,6 +14,7 @@ ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
 custom_proxy_group=Proxy`select`.*
+custom_proxy_group=Telegram`select`.*
 custom_proxy_group=Media`select`.*
 
 enable_rule_generator=true
