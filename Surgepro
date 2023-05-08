@@ -18,7 +18,6 @@ proxy-test-url = http://cp.cloudflare.com/generate_204
 test-timeout = 5
 geoip-maxmind-url = https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
 disable-geoip-db-auto-update = false
-tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 tun-included-routes = 192.168.1.12/32
 udp-policy-not-supported-behaviour = reject        
 udp-priority = true
@@ -47,8 +46,6 @@ always-real-ip = *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.st
 include-all-networks = false
 include-local-networks = false
 use-local-host-item-for-proxy = false
-include-apns = false
-include-cellular-services = false
 
 [Replica]
 hide-apple-request = false
