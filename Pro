@@ -18,12 +18,12 @@ custom_proxy_group=Telegram`select`[]HongKong`[]Singapore`
 custom_proxy_group=Netflix`select`[]HongKong`[]Singapore`
 custom_proxy_group=YouTube`select`[]HongKong`[]Singapore`
 custom_proxy_group=Disney+`select`[]HongKong`[]Singapore`
-custom_proxy_group=HongKong`fallback`[]HK(Flower)`[]HK(Bywave)`http://www.gstatic.com/generate_204`180  
-custom_proxy_group=Singapore`fallback`[]SG(Flower)`[]SG(Bywave)`http://www.gstatic.com/generate_204`180
-custom_proxy_group=HK(Flower)`load-balance`(香港.*?高级)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=HongKong`url-test`[]HK(Flower)`[]HK(Bywave)`http://www.gstatic.com/generate_204`180  
+custom_proxy_group=Singapore`url-test`[]SG(Flower)`[]SG(Bywave)`http://www.gstatic.com/generate_204`180
 custom_proxy_group=HK(Bywave)`load-balance`(香港.*?ByWave)`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=SG(Flower)`load-balance`(新加坡.*?高级)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=HK(BYG)`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|ByWave)).)*$)`http://www.gstatic.com/generate_204`600,,50
 custom_proxy_group=SG(Bywave)`load-balance`(新加坡.*?DP)`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=SG(BYG)`load-balance`(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美|实验|标准|DP)).)*$)`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
