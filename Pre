@@ -13,13 +13,12 @@ ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/ma
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
-custom_proxy_group=Proxy`select`[]HongKong`[]Singapore`[]TaiWan
-custom_proxy_group=Telegram`select`[]HongKong`[]Singapore`[]TaiWan
-custom_proxy_group=Netflix`select`[]HongKong`[]Singapore`[]TaiWan
-custom_proxy_group=YouTube`select`[]HongKong`[]Singapore`[]TaiWan
-custom_proxy_group=Disney+`select`[]HongKong`[]Singapore`[]TaiWan
+custom_proxy_group=Proxy`select`[]HongKong`[]Singapore`
+custom_proxy_group=Telegram`select`[]HongKong`[]Singapore`
+custom_proxy_group=Netflix`select`[]HongKong`[]Singapore`
+custom_proxy_group=YouTube`select`[]HongKong`[]Singapore`
+custom_proxy_group=Disney+`select`[]HongKong`[]Singapore`
 custom_proxy_group=HongKong`load-balance`(港|HK|Hong Kong)`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=TaiWan`load-balance`(台|台湾|台灣|新北|彰化|深台|CHT|HINET|TW|Taiwan)`http://www.gstatic.com/generate_204`600,,50
 custom_proxy_group=Singapore`load-balance`(新|新加坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
