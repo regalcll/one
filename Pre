@@ -18,8 +18,8 @@ custom_proxy_group=Telegram`select`[]HongKong`[]Singapore`
 custom_proxy_group=Netflix`select`[]HongKong`[]Singapore`
 custom_proxy_group=YouTube`select`[]HongKong`[]Singapore`
 custom_proxy_group=Disney+`select`[]HongKong`[]Singapore`
-custom_proxy_group=HongKong`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准)).)*$`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=Singapore`load-balance`(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美|实验|标准)).)*$`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=HongKong`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Singapore`load-balance`(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美)).)*$`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
