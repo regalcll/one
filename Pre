@@ -18,9 +18,9 @@ custom_proxy_group=Telegram`select`[]HongKong`[]Japan`[]Singapore`
 custom_proxy_group=Netflix`select`[]HongKong`[]Japan`[]Singapore`
 custom_proxy_group=YouTube`select`[]HongKong`[]Japan`[]Singapore`
 custom_proxy_group=Disney+`select`[]HongKong`[]Japan`[]Singapore`
-custom_proxy_group=HongKong`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=Japan`load-balance`(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美|尼|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=Singapore`load-balance`(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美)).)*$`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=HongKong`load-balance`港|HK|Hong`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Japan`load-balance`日本|JP|Japan`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Singapore`load-balance`新|狮|獅|SG|Singapore`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
