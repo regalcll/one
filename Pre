@@ -13,14 +13,13 @@ ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/ma
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
-custom_proxy_group=Proxy`select`[]HongKong`[]TaiWan`[]Japan`[]Singapore`
-custom_proxy_group=Telegram`select`[]HongKong`[]TaiWan`[]Japan`[]Singapore`
-custom_proxy_group=Netflix`select`[]HongKong`[]TaiWan`[]Japan`[]Singapore`
-custom_proxy_group=YouTube`select`[]HongKong`[]TaiWan`[]Japan`[]Singapore`
-custom_proxy_group=Disney+`select`[]HongKong`[]TaiWan`[]Japan`[]Singapore`
-custom_proxy_group=HongKong`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|实验|标准|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=TaiWan`load-balance`(?=.*(台|TW|Tai|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=Japan`load-balance`(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|尼|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Proxy`select`[]HongKong`[]Japan`[]Singapore`
+custom_proxy_group=Telegram`select`[]HongKong`[]Japan`[]Singapore`
+custom_proxy_group=Netflix`select`[]HongKong`[]Japan`[]Singapore`
+custom_proxy_group=YouTube`select`[]HongKong`[]Japan`[]Singapore`
+custom_proxy_group=Disney+`select`[]HongKong`[]Japan`[]Singapore`
+custom_proxy_group=HongKong`load-balance`(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Japan`load-balance`(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美|尼|游戏)).)*$`http://www.gstatic.com/generate_204`600,,50
 custom_proxy_group=Singapore`load-balance`(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|兰|美)).)*$`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
