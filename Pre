@@ -19,9 +19,9 @@ custom_proxy_group=Telegram`select`[]HongKong`[]TaiWan`[]Singapore`
 custom_proxy_group=Netflix`select`[]HongKong`[]TaiWan`[]Singapore`
 custom_proxy_group=YouTube`select`[]HongKong`[]TaiWan`[]Singapore`
 custom_proxy_group=Disney+`select`[]HongKong`[]TaiWan`[]Singapore`
-custom_proxy_group=HongKong`load-balance`港|HK|Hong`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=TaiWan`load-balance`台|TW|Tai|(?i)Taiwan`http://www.gstatic.com/generate_204`600,,50
-custom_proxy_group=Singapore`load-balance`新|狮|獅|SG|Singapore`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=HongKong`url-test`港|HK|Hong`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=TaiWan`url-test`台|TW|Tai|(?i)Taiwan`http://www.gstatic.com/generate_204`600,,50
+custom_proxy_group=Singapore`url-test`新|狮|獅|SG|Singapore`http://www.gstatic.com/generate_204`600,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
