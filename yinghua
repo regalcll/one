@@ -1,24 +1,27 @@
 [custom]
 
-ruleset=Bitcoin,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.list
-ruleset=Bitcoin,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OKX/OKX.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
-ruleset=Proxies,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/YouTube.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
-ruleset=Proxies,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/DisneyPlus.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list
 ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
 ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list
 ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ChinaASN/ChinaASN.list
+ruleset=𝐁𝐢𝐭𝐜𝐨𝐢𝐧,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.list
+ruleset=𝐁𝐢𝐭𝐜𝐨𝐢𝐧,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OKX/OKX.list
+ruleset=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list
+ruleset=𝐘𝐨𝐮𝐓𝐮𝐛𝐞,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/YouTube.list
+ruleset=𝐃𝐢𝐬𝐧𝐞𝐲+,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/DisneyPlus.list
+ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list
+ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
+ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.list
+ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
 ruleset=DIRECT,[]GEOIP,CN
-ruleset=Proxies,[]MATCH
+ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,[]MATCH
 
-custom_proxy_group=Proxies`select`.*
-custom_proxy_group=Bitcoin`select`.*
+custom_proxy_group=𝐏𝐫𝐨𝐱𝐢𝐞𝐬`select`.*
+custom_proxy_group=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦`select`.*
+custom_proxy_group=𝐘𝐨𝐮𝐓𝐮𝐛𝐞`select`.*
+custom_proxy_group=𝐃𝐢𝐬𝐧𝐞𝐲+`select`.*
+custom_proxy_group=𝐁𝐢𝐭𝐜𝐨𝐢𝐧`select`.*
 
 enable_rule_generator=true
 overwrite_original_rules=true
