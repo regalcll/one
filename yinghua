@@ -14,12 +14,12 @@ ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/blackmatr
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,[]MATCH
 
-custom_proxy_group=𝐏𝐫𝐨𝐱𝐢𝐞𝐬`select`.*`DIRECT
-custom_proxy_group=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦`select`.*`DIRECT
-custom_proxy_group=𝐘𝐨𝐮𝐓𝐮𝐛𝐞`select`.*`DIRECT
-custom_proxy_group=𝐃𝐢𝐬𝐧𝐞𝐲+`select`.*`DIRECT
-custom_proxy_group=𝐁𝐢𝐭𝐜𝐨𝐢𝐧`select`.*`DIRECT
-custom_proxy_group=𝐄𝐦𝐛𝐲`select`.*`DIRECT
+custom_proxy_group=𝐏𝐫𝐨𝐱𝐢𝐞𝐬`select`.*`[]DIRECT
+custom_proxy_group=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦`select`.*`[]DIRECT
+custom_proxy_group=𝐘𝐨𝐮𝐓𝐮𝐛𝐞`select`.*`[]DIRECT
+custom_proxy_group=𝐃𝐢𝐬𝐧𝐞𝐲+`select`.*`[]DIRECT
+custom_proxy_group=𝐁𝐢𝐭𝐜𝐨𝐢𝐧`select`.*`[]DIRECT
+custom_proxy_group=𝐄𝐦𝐛𝐲`select`.*`[]DIRECT
 
 enable_rule_generator=true
 overwrite_original_rules=true
