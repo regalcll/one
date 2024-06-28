@@ -15,15 +15,16 @@ ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,https://raw.githubusercontent.com/blackmatr
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=𝐏𝐫𝐨𝐱𝐢𝐞𝐬,[]MATCH
 
-custom_proxy_group=𝐏𝐫𝐨𝐱𝐢𝐞𝐬`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]DIRECT
-custom_proxy_group=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]DIRECT
-custom_proxy_group=𝐘𝐨𝐮𝐓𝐮𝐛𝐞`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]DIRECT
-custom_proxy_group=𝐃𝐢𝐬𝐧𝐞𝐲+`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]DIRECT
-custom_proxy_group=𝐁𝐢𝐭𝐜𝐨𝐢𝐧`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]DIRECT
+custom_proxy_group=𝐏𝐫𝐨𝐱𝐢𝐞𝐬`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]𝐉𝐚𝐩𝐚𝐧`[]DIRECT
+custom_proxy_group=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]𝐉𝐚𝐩𝐚𝐧`[]DIRECT
+custom_proxy_group=𝐘𝐨𝐮𝐓𝐮𝐛𝐞`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]𝐉𝐚𝐩𝐚𝐧`[]DIRECT
+custom_proxy_group=𝐃𝐢𝐬𝐧𝐞𝐲+`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]𝐉𝐚𝐩𝐚𝐧`[]DIRECT
+custom_proxy_group=𝐁𝐢𝐭𝐜𝐨𝐢𝐧`select`[]𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`[]𝐓𝐚𝐢𝐖𝐚𝐧`[]𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`[]𝐉𝐚𝐩𝐚𝐧`[]DIRECT
 custom_proxy_group=𝐄𝐦𝐛𝐲`select`.*`[]DIRECT
 custom_proxy_group=𝐇𝐨𝐧𝐠𝐊𝐨𝐧𝐠`load-balance`港|HK|Hong`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=𝐓𝐚𝐢𝐖𝐚𝐧`load-balance`台|台湾|台灣|新北|彰化|深台|CHT|HINET|TW|Tai`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=𝐒𝐢𝐧𝐠𝐚𝐩𝐨𝐫𝐞`load-balance`新加坡|坡|新|狮城|SG|Singapore`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=𝐉𝐚𝐩𝐚𝐧`load-balance`日((?!用).)+|东京|大阪|埼玉|JP|Japan`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
