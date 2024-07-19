@@ -167,7 +167,6 @@ function main(config) {
       "name": "Proxies",
       "type": "select",
       "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
-      "include-all": true,
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
     },
     {
@@ -204,6 +203,15 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Taiwan",
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
+      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/TW.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "Singapore",
       "type": "load-balance",
       "tolerance": 0,
@@ -219,15 +227,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/JP.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Taiwan",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/TW.png"
     }
   ];
 
