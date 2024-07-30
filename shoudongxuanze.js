@@ -166,21 +166,14 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxies",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "include-all": true,
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Youtube",
-      "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
       ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "include-all": true,
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
     },
     {
@@ -188,41 +181,7 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
-    },
-    // 地区分组
-    {
-      ...groupBaseOption,
-      "name": "HongKong",
-      "type": "select",
-      "include-all": true,
-      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/HK.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Taiwan",
-      "type": "select",
-      "include-all": true,
-      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/TW.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Singapore",
-      "type": "select",
-      "include-all": true,
-      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/SG.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Japan",
-      "type": "select",
-      "include-all": true,
-      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/JP.png"
     }
   ];
 
@@ -305,7 +264,7 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
-    "RULE-SET,YouTube,Youtube",
+    "RULE-SET,YouTube,Proxies",
     "RULE-SET,Google,Proxies",
     "RULE-SET,Telegram,Telegram",
     "RULE-SET,Twitter,Proxies",
