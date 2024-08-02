@@ -1,9 +1,3 @@
-// 参考 Verge 示例 Script 配置
-//
-// Clash Verg Rev Version ≥ 1.7.2
-//
-// 最后更新时间: 2024-07-05 18:05
-
 // 规则集通用配置
 const ruleProviderCommon = {
   "type": "http",
@@ -166,29 +160,29 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxies",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Youtube",
-      "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
       ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Streaming",
+      "type": "select",
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
       ...groupBaseOption,
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
     // 地区分组
@@ -218,15 +212,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/SG.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Japan",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/JP.png"
     }
   ];
 
@@ -309,13 +294,13 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
-    "RULE-SET,YouTube,Youtube",
-    "RULE-SET,Google,Proxies",
     "RULE-SET,Telegram,Telegram",
-    "RULE-SET,Twitter,Proxies",
+    "RULE-SET,YouTube,Streaming",
+    "RULE-SET,Netflix,Streaming",
+    "RULE-SET,Disney,Streaming",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Netflix,Proxies",
-    "RULE-SET,Disney,Proxies",
+    "RULE-SET,Google,Proxies",
+    "RULE-SET,Twitter,Proxies",
     "GEOSITE,GitHub,Proxies",
     "GEOSITE,microsoft,Proxies",
     "GEOSITE,gfw,Proxies",
