@@ -229,23 +229,11 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
       "path": "./rule-providers/YouTube.list"
     },
-    "Google": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
-      "path": "./rule-providers/Google.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
       "path": "./rule-providers/Telegram.list"
-    },
-    "Twitter": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
     },
     "Emby": {
       ...ruleProviderCommon,
@@ -265,29 +253,11 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
-    "GitHub": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
-      "path": "./rule-providers/GitHub.list"
-    },
-    "Microsoft": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
-      "path": "./rule-providers/Microsoft.list"
-    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list",
       "path": "./rule-providers/Lan.list"
-    },
-    "ProxyGFW": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rule-providers/ProxyGFW.list"
     }
   };
 
@@ -299,10 +269,6 @@ function main(config) {
     "RULE-SET,Netflix,Streaming",
     "RULE-SET,Disney,Streaming",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Google,Proxies",
-    "RULE-SET,Twitter,Proxies",
-    "GEOSITE,GitHub,Proxies",
-    "GEOSITE,microsoft,Proxies",
     "GEOSITE,gfw,Proxies",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
