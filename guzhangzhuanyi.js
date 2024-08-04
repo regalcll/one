@@ -166,21 +166,21 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxies",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
     },
     {
       ...groupBaseOption,
       "name": "Youtube",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
       ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
     },
     {
@@ -188,7 +188,7 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan", "DIRECT"],
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
     // 地区分组
@@ -218,15 +218,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/SG.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Japan",
-      "type": "fallback",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/JP.png"
     }
   ];
 
@@ -244,23 +235,11 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
       "path": "./rule-providers/YouTube.list"
     },
-    "Google": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
-      "path": "./rule-providers/Google.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
       "path": "./rule-providers/Telegram.list"
-    },
-    "Twitter": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
     },
     "Emby": {
       ...ruleProviderCommon,
@@ -280,29 +259,11 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
-    "GitHub": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
-      "path": "./rule-providers/GitHub.list"
-    },
-    "Microsoft": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
-      "path": "./rule-providers/Microsoft.list"
-    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list",
       "path": "./rule-providers/Lan.list"
-    },
-    "ProxyGFW": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rule-providers/ProxyGFW.list"
     }
   };
 
@@ -310,14 +271,10 @@ function main(config) {
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
     "RULE-SET,YouTube,Youtube",
-    "RULE-SET,Google,Proxies",
     "RULE-SET,Telegram,Telegram",
-    "RULE-SET,Twitter,Proxies",
     "RULE-SET,Emby,Emby",
     "RULE-SET,Netflix,Proxies",
     "RULE-SET,Disney,Proxies",
-    "GEOSITE,GitHub,Proxies",
-    "GEOSITE,microsoft,Proxies",
     "GEOSITE,gfw,Proxies",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
