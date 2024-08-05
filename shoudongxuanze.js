@@ -1,9 +1,3 @@
-// 参考 Verge 示例 Script 配置
-//
-// Clash Verg Rev Version ≥ 1.7.2
-//
-// 最后更新时间: 2024-07-05 18:05
-
 // 规则集通用配置
 const ruleProviderCommon = {
   "type": "http",
@@ -178,6 +172,13 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Streaming",
+      "type": "select",
+      "include-all": true,
+      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "Emby",
       "type": "select",
       "include-all": true,
@@ -199,23 +200,11 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
       "path": "./rule-providers/YouTube.list"
     },
-    "Google": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
-      "path": "./rule-providers/Google.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
       "path": "./rule-providers/Telegram.list"
-    },
-    "Twitter": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
     },
     "Emby": {
       ...ruleProviderCommon,
@@ -235,44 +224,22 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
-    "GitHub": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
-      "path": "./rule-providers/GitHub.list"
-    },
-    "Microsoft": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
-      "path": "./rule-providers/Microsoft.list"
-    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list",
       "path": "./rule-providers/Lan.list"
-    },
-    "ProxyGFW": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rule-providers/ProxyGFW.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
-    "RULE-SET,YouTube,Proxies",
-    "RULE-SET,Google,Proxies",
+    "RULE-SET,YouTube,Streaming",
     "RULE-SET,Telegram,Telegram",
-    "RULE-SET,Twitter,Proxies",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Netflix,Proxies",
-    "RULE-SET,Disney,Proxies",
-    "GEOSITE,GitHub,Proxies",
-    "GEOSITE,microsoft,Proxies",
+    "RULE-SET,Netflix,Streaming",
+    "RULE-SET,Disney,Streaming",
     "GEOSITE,gfw,Proxies",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
