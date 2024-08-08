@@ -171,17 +171,17 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Youtube",
-      "type": "select",
-      "proxies": ["HongKong", "Taiwan", "Singapore"],
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
-    },
-    {
-      ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
       "proxies": ["HongKong", "Taiwan", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Streaming",
+      "type": "select",
+      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
       ...groupBaseOption,
@@ -270,11 +270,11 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
-    "RULE-SET,YouTube,Youtube",
     "RULE-SET,Telegram,Telegram",
+    "RULE-SET,YouTube,Streaming",
+    "RULE-SET,Netflix,Streaming",
+    "RULE-SET,Disney,Streaming",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Netflix,Proxies",
-    "RULE-SET,Disney,Proxies",
     "GEOSITE,gfw,Proxies",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
