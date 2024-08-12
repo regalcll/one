@@ -247,23 +247,17 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
       "path": "./rule-providers/Emby.list"
     },
-    "Netflix": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
-      "path": "./rule-providers/Netflix.list"
-    },
     "Disney": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
-    "Lan": {
+    "Global": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list",
-      "path": "./rule-providers/Lan.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list",
+      "path": "./rule-providers/Global.list"
     }
   };
 
@@ -272,9 +266,9 @@ function main(config) {
     "RULE-SET,Apple,DIRECT",
     "RULE-SET,Telegram,Telegram",
     "RULE-SET,YouTube,Streaming",
-    "RULE-SET,Netflix,Streaming",
     "RULE-SET,Disney,Streaming",
     "RULE-SET,Emby,Emby",
+    "RULE-SET,Global,Proxies",
     "GEOSITE,gfw,Proxies",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
