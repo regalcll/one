@@ -166,21 +166,21 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxies",
       "type": "select",
-      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "proxies": ["HongKong", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
     },
     {
       ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
-      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "proxies": ["HongKong", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
     },
     {
       ...groupBaseOption,
       "name": "Streaming",
       "type": "select",
-      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "proxies": ["HongKong", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
@@ -188,7 +188,7 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["HongKong", "Taiwan", "Singapore"],
+      "proxies": ["HongKong", "Singapore"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
     // 地区分组
@@ -200,15 +200,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/HK.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Taiwan",
-      "type": "fallback",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/TW.png"
     },
     {
       ...groupBaseOption,
