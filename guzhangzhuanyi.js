@@ -182,7 +182,7 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["HongKong", "Singapore"],
+      "proxies": ["HK", "SG"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
     // 地区分组
