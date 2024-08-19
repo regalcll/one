@@ -1,9 +1,3 @@
-// 参考 Verge 示例 Script 配置
-//
-// Clash Verg Rev Version ≥ 1.7.2
-//
-// 最后更新时间: 2024-07-05 18:05
-
 // 规则集通用配置
 const ruleProviderCommon = {
   "type": "http",
@@ -164,23 +158,23 @@ function main(config) {
   config["proxy-groups"] = [
     {
       ...groupBaseOption,
-      "name": "Proxies",
+      "name": "Proxy",
       "type": "select",
-      "proxies": ["HongKong", "Singapore"],
+      "proxies": ["HK", "SG"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
     },
     {
       ...groupBaseOption,
-      "name": "Telegram",
+      "name": "Chat",
       "type": "select",
-      "proxies": ["HongKong", "Singapore"],
+      "proxies": ["HK", "SG"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
     },
     {
       ...groupBaseOption,
-      "name": "Streaming",
+      "name": "Media",
       "type": "select",
-      "proxies": ["HongKong", "Singapore"],
+      "proxies": ["HK", "SG"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png"
     },
     {
@@ -194,7 +188,7 @@ function main(config) {
     // 地区分组
     {
       ...groupBaseOption,
-      "name": "HongKong",
+      "name": "HK",
       "type": "fallback",
       "tolerance": 0,
       "include-all": true,
@@ -203,7 +197,7 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Singapore",
+      "name": "SG",
       "type": "fallback",
       "tolerance": 0,
       "include-all": true,
@@ -232,6 +226,12 @@ function main(config) {
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
       "path": "./rule-providers/Telegram.list"
     },
+    "Discord": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list",
+      "path": "./rule-providers/Discord.list"
+    },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -255,16 +255,17 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
-    "RULE-SET,Telegram,Telegram",
-    "RULE-SET,YouTube,Streaming",
-    "RULE-SET,Disney,Streaming",
+    "RULE-SET,Telegram,Chat",
+    "RULE-SET,Discord,Chat",
+    "RULE-SET,YouTube,Media",
+    "RULE-SET,Disney,Media",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Global,Proxies",
-    "GEOSITE,gfw,Proxies",
+    "RULE-SET,Global,Proxy",
+    "GEOSITE,gfw,Proxy",
     "GEOSITE,cn,DIRECT",
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
-    "MATCH,Proxies"
+    "MATCH,Proxy"
   ];
 
   // 返回修改后的配置
