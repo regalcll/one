@@ -8,7 +8,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://latency-test.skk.moe/endpoint",
+  "url": "http://www.gstatic.com/generate_204",
   "max-failed-times": 3,
 };
 
