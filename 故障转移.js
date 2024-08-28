@@ -120,13 +120,6 @@ function main(config) {
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "AD",
-      "type": "select",
-      "proxies": ["REJECT", "DIRECT"],
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"
-    },
     // 地区分组
     {
       ...groupBaseOption,
@@ -150,29 +143,11 @@ function main(config) {
 
   // 覆盖规则集
   config["rule-providers"] = {
-    "AD": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Reject.list",
-      "path": "./rule-providers/AD.list"
-    },
     "Apple": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Apple.list",
       "path": "./rule-providers/Apple.list"
-    },
-    "Google": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
-      "path": "./rule-providers/Google.list"
-    },
-    "YouTube": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
-      "path": "./rule-providers/YouTube.list"
     },
     "Telegram": {
       ...ruleProviderCommon,
@@ -180,47 +155,11 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
       "path": "./rule-providers/Telegram.list"
     },
-    "Twitter": {
+    "YouTube": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
-    },
-    "Steam": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Steam.list",
-      "path": "./rule-providers/Steam.list"
-    },
-    "Epic": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Epic.list",
-      "path": "./rule-providers/Epic.list"
-    },
-    "AI": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list",
-      "path": "./rule-providers/AI.list"
-    },
-    "Emby": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-      "path": "./rule-providers/Emby.list"
-    },
-    "Spotify": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Spotify.list",
-      "path": "./rule-providers/Spotify.list"
-    },
-    "Bahamut": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Bahamut.list",
-      "path": "./rule-providers/Bahamut.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
+      "path": "./rule-providers/YouTube.list"
     },
     "Netflix": {
       ...ruleProviderCommon,
@@ -234,47 +173,35 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
-    "PrimeVideo": {
+    "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/PrimeVideo.list",
-      "path": "./rule-providers/PrimeVideo.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
+      "path": "./rule-providers/Emby.list"
     },
-    "HBO": {
+    "Twitter": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/HBO.list",
-      "path": "./rule-providers/HBO.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
+      "path": "./rule-providers/Twitter.list"
     },
-    "OneDrive": {
+    "Google": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list",
-      "path": "./rule-providers/OneDrive.list"
-    },
-    "Github": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
-      "path": "./rule-providers/Github.list"
-    },
-    "Microsoft": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list",
-      "path": "./rule-providers/Microsoft.list"
-    },
-    "Lan": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rule-providers/Lan.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
+      "path": "./rule-providers/Google.list"
     },
     "ProxyGFW": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
       "path": "./rule-providers/ProxyGFW.list"
+    },
+    "Lan": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
+      "path": "./rule-providers/Lan.list"
     },
     "China": {
       ...ruleProviderCommon,
@@ -286,25 +213,14 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,AD,AD",
-    "RULE-SET,AI,Proxy",
     "RULE-SET,Apple,DIRECT",
     "RULE-SET,YouTube,Media",
-    "RULE-SET,Google,Proxy",
-    "RULE-SET,Telegram,Chat",
-    "RULE-SET,Twitter,Proxy",
-    "RULE-SET,Steam,DIRECT",
-    "RULE-SET,Epic,DIRECT",
-    "RULE-SET,Emby,Emby",
-    "RULE-SET,Spotify,Media",
-    "RULE-SET,Bahamut,Media",
     "RULE-SET,Netflix,Media",
     "RULE-SET,Disney,Media",
-    "RULE-SET,PrimeVideo,Media",
-    "RULE-SET,HBO,Media",
-    "GEOSITE,onedrive,DIRECT",
-    "GEOSITE,github,DIRECT",
-    "GEOSITE,microsoft,DIRECT",
+    "RULE-SET,Emby,Emby",
+    "RULE-SET,Telegram,Chat",
+    "RULE-SET,Twitter,Proxy",
+    "RULE-SET,Google,Proxy",
     "GEOSITE,gfw,Proxy",
     "RULE-SET,China,DIRECT",
     "GEOIP,lan,DIRECT",
