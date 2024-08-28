@@ -120,13 +120,6 @@ function main(config) {
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "AD",
-      "type": "select",
-      "proxies": ["REJECT", "DIRECT"],
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png"
-    },
     // 地区分组
     {
       ...groupBaseOption,
