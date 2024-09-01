@@ -146,31 +146,31 @@ function main(config) {
     "Apple": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Apple.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
       "path": "./rule-providers/Apple.list"
     },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
       "path": "./rule-providers/Telegram.list"
     },
     "YouTube": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
       "path": "./rule-providers/YouTube.list"
     },
     "Netflix": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Netflix.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
       "path": "./rule-providers/Netflix.list"
     },
     "Disney": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
     "Emby": {
@@ -182,20 +182,20 @@ function main(config) {
     "Twitter": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
       "path": "./rule-providers/Twitter.list"
     },
     "Google": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
       "path": "./rule-providers/Google.list"
     },
-    "ProxyGFW": {
+    "Global": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rule-providers/ProxyGFW.list"
+      "url": "https://whatshub.top/rule/Global.rule",
+      "path": "./rule-providers/Global.rule"
     },
     "Lan": {
       ...ruleProviderCommon,
@@ -206,8 +206,8 @@ function main(config) {
     "China": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rule-providers/China.list"
+      "url": "https://whatshub.top/rule/ASN-CN.rule",
+      "path": "./rule-providers/ASN-CN.rule"
     }
   };
 
@@ -221,10 +221,9 @@ function main(config) {
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Twitter,Proxy",
     "RULE-SET,Google,Proxy",
-    "GEOSITE,gfw,Proxy",
-    "RULE-SET,China,DIRECT",
+    "RULE-SET,Global,Proxy",
     "GEOIP,lan,DIRECT",
-    "GEOIP,CN,DIRECT",
+    "RULE-SET,China,DIRECT",
     "MATCH,Proxy"
   ];
 
