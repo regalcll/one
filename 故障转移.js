@@ -194,20 +194,15 @@ function main(config) {
     "Global": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://whatshub.top/rule/Global.rule",
-      "path": "./rule-providers/Global.rule"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list",
+      "path": "./rule-providers/Global.list"
     },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
       "path": "./rule-providers/Lan.list"
-    },
-    "China": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://whatshub.top/rule/ASN-CN.rule",
-      "path": "./rule-providers/ASN-CN.rule"
+
     }
   };
 
@@ -222,8 +217,8 @@ function main(config) {
     "RULE-SET,Twitter,Proxy",
     "RULE-SET,Google,Proxy",
     "RULE-SET,Global,Proxy",
-    "GEOIP,lan,DIRECT",
-    "RULE-SET,China,DIRECT",
+    "RULE-SET,Lan,DIRECT",
+    "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
 
