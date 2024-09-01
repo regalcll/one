@@ -202,12 +202,7 @@ function main(config) {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
       "path": "./rule-providers/Lan.list"
-    },
-    "China": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list",
-      "path": "./rule-providers/ChinaMax.list"
+
     }
   };
 
@@ -223,7 +218,7 @@ function main(config) {
     "RULE-SET,Google,Proxy",
     "RULE-SET,Global,Proxy",
     "RULE-SET,Lan,DIRECT",
-    "RULE-SET,China,DIRECT",
+    "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
 
