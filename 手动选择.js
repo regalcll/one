@@ -1,8 +1,4 @@
-// 参考 Verge Rev 示例 Script 配置
-//
-// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 0.5.8)
-//
-// 最后更新时间: 2024-8-24 22:00
+// 最后更新时间: 2024-09-04
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -14,7 +10,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://connectivitycheck.gstatic.com/generate_204",
+  "url": "http://www.gstatic.com/generate_204",
   "max-failed-times": 3,
 };
 
@@ -187,17 +183,74 @@ function main(config) {
   };
 
   // 覆盖规则
+    config["rule-providers"] = {
+    "Apple": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Apple.list",
+      "path": "./rule-providers/Apple.list"
+    },
+    "Telegram": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
+      "path": "./rule-providers/Telegram.list"
+    },
+    "YouTube": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
+      "path": "./rule-providers/YouTube.list"
+    },
+    "Disney": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
+      "path": "./rule-providers/Disney.list"
+    },
+    "Emby": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
+      "path": "./rule-providers/Emby.list"
+    },
+    "Google": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
+      "path": "./rule-providers/Google.list"
+    },
+    "ProxyGFW": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
+      "path": "./rules/ProxyGFW.list"
+    },
+    "Lan": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
+      "path": "./rule-providers/Lan.list"
+    },
+    "China": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
+      "path": "./rules/China.list"
+    }
+  };
+
+  // 覆盖规则
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
+    "RULE-SET,Telegram,Chat",
     "RULE-SET,YouTube,Media",
-    "RULE-SET,Netflix,Media",
     "RULE-SET,Disney,Media",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Telegram,Chat",
-    "RULE-SET,Twitter,Proxy",
     "RULE-SET,Google,Proxy",
-    "RULE-SET,Global,Proxy",
+    "RULE-SET,ProxyGFW,Proxy",
     "RULE-SET,Lan,DIRECT",
+    "RULE-SET,China,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
