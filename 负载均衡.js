@@ -14,7 +14,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://connectivitycheck.gstatic.com/generate_204",
+  "url": "http://www.gstatic.com/generate_204",
   "max-failed-times": 3,
 };
 
@@ -95,28 +95,28 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxy",
       "type": "select",
-      "proxies": ["HK", "SG"],
+      "proxies": ["HK", "TW", "SG"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
     },
     {
       ...groupBaseOption,
       "name": "Media",
       "type": "select",
-      "proxies": ["HK", "SG"],
+      "proxies": ["HK", "TW", "SG"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
     },
     {
       ...groupBaseOption,
       "name": "Chat",
       "type": "select",
-      "proxies": ["HK", "SG"],
+      "proxies": ["HK", "TW", "SG"],
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
     },
     {
       ...groupBaseOption,
       "name": "Emby",
       "type": "select",
-      "proxies": ["HK", "SG"],
+      "proxies": ["HK", "TW", "SG"],
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
@@ -127,8 +127,17 @@ function main(config) {
       "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
-      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
+      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/HK.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "TW",
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(台|新北|彰化|TW|Taiwan)",
+      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/TW.png"
     },
     {
       ...groupBaseOption,
@@ -136,7 +145,7 @@ function main(config) {
       "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
-      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
+      "filter": "(新加坡|坡|狮城|SG|Singapore)",
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/SG.png"
     }
   ];
@@ -146,31 +155,25 @@ function main(config) {
     "Apple": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Apple.list",
       "path": "./rule-providers/Apple.list"
     },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
       "path": "./rule-providers/Telegram.list"
     },
     "YouTube": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
       "path": "./rule-providers/YouTube.list"
-    },
-    "Netflix": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
-      "path": "./rule-providers/Netflix.list"
     },
     "Disney": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.list",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
       "path": "./rule-providers/Disney.list"
     },
     "Emby": {
@@ -179,30 +182,29 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
       "path": "./rule-providers/Emby.list"
     },
-    "Twitter": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
-    },
     "Google": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
       "path": "./rule-providers/Google.list"
     },
-    "Global": {
+    "ProxyGFW": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.list",
-      "path": "./rule-providers/Global.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
+      "path": "./rules/ProxyGFW.list"
     },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
       "path": "./rule-providers/Lan.list"
-
+    },
+    "China": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
+      "path": "./rules/China.list"
     }
   };
 
@@ -210,14 +212,13 @@ function main(config) {
   config["rules"] = [
     "RULE-SET,Apple,DIRECT",
     "RULE-SET,YouTube,Media",
-    "RULE-SET,Netflix,Media",
     "RULE-SET,Disney,Media",
     "RULE-SET,Emby,Emby",
     "RULE-SET,Telegram,Chat",
-    "RULE-SET,Twitter,Proxy",
     "RULE-SET,Google,Proxy",
-    "RULE-SET,Global,Proxy",
+    "RULE-SET,ProxyGFW,Proxy",
     "RULE-SET,Lan,DIRECT",
+    "RULE-SET,China,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
