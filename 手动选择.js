@@ -1,4 +1,4 @@
-// 最后更新时间: 2024-09-04
+// 最后更新时间: 2024-09-09
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -10,7 +10,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://www.gstatic.com/generate_204",
+  "url": "http://connectivitycheck.gstatic.com/generate_204",
   "max-failed-times": 3,
 };
 
@@ -29,6 +29,7 @@ function main(config) {
   config["allow-lan"] = true;
   config["ipv6"] = false;
   config["log-level"] = "info";
+  config["unified-delay"] = "true";
   config["find-process-mode"] = "strict";
   config["global-client-fingerprint"] = "chrome";
   config["external-controller"] = "127.0.0.1:9090";
@@ -43,8 +44,8 @@ function main(config) {
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
     "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
-    "default-nameserver": ["223.5.5.5", "119.29.29.29", "system"],
-    "nameserver": ["223.5.5.5", "119.29.29.29"],
+    "default-nameserver": ["system"],
+    "nameserver": ["223.5.5.5", "119.29.29.29", "180.184.1.1"],
     "nameserver-policy": {
       "geosite:cn": "system",
       "geosite:gfw,geolocation-!cn": ["quic://223.5.5.5", "quic://223.6.6.6", "https://1.12.12.12/dns-query", "https://120.53.53.53/dns-query"]
@@ -96,17 +97,17 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Media",
-      "type": "select",
-      "include-all": true,
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
-    },
-    {
-      ...groupBaseOption,
       "name": "Chat",
       "type": "select",
       "include-all": true,
       "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Media",
+      "type": "select",
+      "include-all": true,
+      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
     },
     {
       ...groupBaseOption,
