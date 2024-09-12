@@ -10,9 +10,11 @@ ruleset=𝐏𝐫𝐨𝐱𝐲,https://raw.githubusercontent.com/blackmatrix7/ios_
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=𝐏𝐫𝐨𝐱𝐲,[]MATCH
 
-custom_proxy_group=𝐏𝐫𝐨𝐱𝐲`select`.*`[]DIRECT
-custom_proxy_group=𝐂𝐡𝐚𝐭`select`.*`[]DIRECT
-custom_proxy_group=𝐌𝐞𝐝𝐢𝐚`select`.*`[]DIRECT
+custom_proxy_group=𝐏𝐫𝐨𝐱𝐲`select`[]𝐇𝐊`[]𝐒𝐆`
+custom_proxy_group=𝐂𝐡𝐚𝐭`select`[]𝐇𝐊`[]𝐒𝐆`
+custom_proxy_group=𝐌𝐞𝐝𝐢𝐚`select`[]𝐇𝐊`[]𝐒𝐆`
+custom_proxy_group=𝐇𝐊`select`(港|HK|hk|Hong Kong|HongKong|hongkong)
+custom_proxy_group=𝐒𝐆`select`(新加坡|坡|狮城|SG|Singapore)
 
 enable_rule_generator=true
 overwrite_original_rules=true
