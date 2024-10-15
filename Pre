@@ -7,10 +7,9 @@ ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/mas
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Proxy,[]MATCH
 
-custom_proxy_group=Proxy`select`[]HK`[]SG`
-custom_proxy_group=Chat`select`[]HK`[]SG`
-custom_proxy_group=HK`load-balance`港|HK|hk|Hong Kong|HongKong|hongkong`http://1.0.0.1/media/manifest.json`300,,50
-custom_proxy_group=SG`load-balance`新加坡|坡|狮城|SG|Singapore`http://1.0.0.1/media/manifest.json`300,,50
+custom_proxy_group=Proxy`load-balance`港|HK|hk|Hong Kong|HongKong|hongkong`http://1.0.0.1/media/manifest.json`300,,50
+custom_proxy_group=Chat`load-balance`新加坡|坡|狮城|SG|Singapore`http://1.0.0.1/media/manifest.json`300,,50
+custom_proxy_group=Emby`load-balance`Emby`http://1.0.0.1/media/manifest.json`300,,50
 
 enable_rule_generator=true
 overwrite_original_rules=true
