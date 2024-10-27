@@ -1,4 +1,8 @@
-// 最后更新时间: 2024-09-09
+// 参考 Verge Rev 示例 Script 配置
+//
+// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 0.5.8)
+//
+// 最后更新时间: 2024-10-14 19:00
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -10,7 +14,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://connectivitycheck.gstatic.com/generate_204",
+  "url": "http://detectportal.firefox.com/success.txt",
   "max-failed-times": 3,
 };
 
@@ -32,9 +36,6 @@ function main(config) {
   config["unified-delay"] = "true";
   config["find-process-mode"] = "strict";
   config["global-client-fingerprint"] = "chrome";
-  config["external-controller"] = "127.0.0.1:9090";
-  config["external-ui"] = "ui";
-  config["external-ui-url"] = "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip";
 
   // 覆盖 dns 配置
   config["dns"] = {
@@ -44,12 +45,7 @@ function main(config) {
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
     "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
-    "default-nameserver": ["system"],
-    "nameserver": ["223.5.5.5", "119.29.29.29", "180.184.1.1"],
-    "nameserver-policy": {
-      "geosite:cn": "system",
-      "geosite:gfw,geolocation-!cn": ["quic://223.5.5.5", "quic://223.6.6.6", "https://1.12.12.12/dns-query", "https://120.53.53.53/dns-query"]
-    }
+    "nameserver": ["223.5.5.5", "119.29.29.29", "180.184.1.1"]
   };
 
   // 覆盖 geodata 配置
@@ -91,90 +87,52 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Proxy",
-      "type": "select",
-      "proxies": ["HK", "SG"],
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Global.png"
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
     },
     {
       ...groupBaseOption,
       "name": "Chat",
-      "type": "select",
-      "proxies": ["HK", "SG"],
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Media",
-      "type": "select",
-      "proxies": ["HK", "SG"],
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(新加坡|坡|狮城|SG|Singapore)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
     },
     {
       ...groupBaseOption,
       "name": "Emby",
       "type": "select",
-      "proxies": ["HK", "SG"],
+      "proxies": ["DIRECT", "Proxy"],
       "include-all": true,
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
-    },
-    // 地区分组
-    {
-      ...groupBaseOption,
-      "name": "HK",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/HK.png"
+      "icon": "https://github.com/Orz-3/face/raw/master/Bili.png"
     },
     {
       ...groupBaseOption,
-      "name": "SG",
-      "type": "load-balance",
-      "tolerance": 0,
+      "name": "GLOBAL",
+      "type": "select",
+      "proxies": ["DIRECT", "REJECT"],
       "include-all": true,
-      "filter": "(新加坡|坡|狮城|SG|Singapore)",
-      "icon": "https://raw.githubusercontent.com/Orz-3/face/master/SG.png"
-    }
+      "icon": "https://github.com/Orz-3/face/raw/master/Static.png"
+    } 
   ];
 
   // 覆盖规则集
   config["rule-providers"] = {
-    "Apple": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Apple.list",
-      "path": "./rule-providers/Apple.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
-      "path": "./rule-providers/Telegram.list"
-    },
-    "YouTube": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
-      "path": "./rule-providers/YouTube.list"
-    },
-    "Disney": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
-      "path": "./rule-providers/Disney.list"
+      "path": "./rules/Telegram.list"
     },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-      "path": "./rule-providers/Emby.list"
-    },
-    "Google": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
-      "path": "./rule-providers/Google.list"
+      "path": "./rules/Emby.list"
     },
     "ProxyGFW": {
       ...ruleProviderCommon,
@@ -186,27 +144,16 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rule-providers/Lan.list"
-    },
-    "China": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rules/China.list"
+      "path": "./rules/Lan.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,Apple,DIRECT",
     "RULE-SET,Telegram,Chat",
-    "RULE-SET,YouTube,Media",
-    "RULE-SET,Disney,Media",
     "RULE-SET,Emby,Emby",
-    "RULE-SET,Google,Proxy",
-    "RULE-SET,ProxyGFW,Proxy",
-    "RULE-SET,Lan,DIRECT",
-    "RULE-SET,China,DIRECT",
+    "GEOSITE,gfw,Proxy",
+    "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
