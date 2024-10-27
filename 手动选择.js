@@ -89,6 +89,7 @@ function main(config) {
       "name": "Proxy",
       "type": "select",
       "include-all": true,
+      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
       "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
     },
     {
@@ -96,6 +97,7 @@ function main(config) {
       "name": "Chat",
       "type": "select",
       "include-all": true,
+      "filter": "(新加坡|坡|狮城|SG|Singapore)",
       "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
     },
     {
