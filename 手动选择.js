@@ -1,8 +1,8 @@
 // 参考 Verge Rev 示例 Script 配置
 //
-// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 0.5.8)
+// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
 //
-// 最后更新时间: 2024-10-14 19:00
+// 最后更新时间: 2024-12-15 08:00
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -14,7 +14,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://detectportal.firefox.com/success.txt",
+  "url": "http://1.0.0.1/favicon.ico",
   "max-failed-times": 3,
 };
 
@@ -45,16 +45,16 @@ function main(config) {
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
     "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
-    "nameserver": ["223.5.5.5", "119.29.29.29", "180.184.1.1"]
+    "nameserver": ["223.5.5.5", "119.29.29.29"]
   };
 
   // 覆盖 geodata 配置
   config["geodata-mode"] = true;
   config["geox-url"] = {
-    "geoip": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
-    "geosite": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-    "mmdb": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
-    "asn": "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+    "geoip": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
+    "geosite": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+    "mmdb": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
+    "asn": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
   };
 
   // 覆盖 sniffer 配置
@@ -89,7 +89,6 @@ function main(config) {
       "name": "Proxy",
       "type": "select",
       "include-all": true,
-      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
       "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
     },
     {
@@ -97,34 +96,73 @@ function main(config) {
       "name": "Chat",
       "type": "select",
       "include-all": true,
-      "filter": "(新加坡|坡|狮城|SG|Singapore)",
-      "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
+      "icon": "https://github.com/Orz-3/face/raw/master/Static.png"
     },
     {
       ...groupBaseOption,
-      "name": "Emby",
+      "name": "Media",
       "type": "select",
       "proxies": ["DIRECT", "Proxy"],
       "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Bili.png"    
-    },
-    {
-      ...groupBaseOption,
-      "name": "GLOBAL",
-      "type": "select",
-      "proxies": ["DIRECT", "REJECT"],
-      "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Static.png"
-    } 
+      "icon": "https://github.com/Orz-3/face/raw/master/YouTube.png"
+    }
   ];
 
   // 覆盖规则集
   config["rule-providers"] = {
+    "AD": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Reject.list",
+      "path": "./rules/AD.list"
+    },
+    "Apple": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Apple.list",
+      "path": "./rules/Apple.list"
+    },
+    "Google": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
+      "path": "./rules/Google.list"
+    },
+    "YouTube": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
+      "path": "./rules/YouTube.list"
+    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
       "path": "./rules/Telegram.list"
+    },
+    "Twitter": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
+      "path": "./rules/Twitter.list"
+    },
+    "Steam": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Steam.list",
+      "path": "./rules/Steam.list"
+    },
+    "Epic": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Epic.list",
+      "path": "./rules/Epic.list"
+    },
+    "AI": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list",
+      "path": "./rules/AI.list"
     },
     "Emby": {
       ...ruleProviderCommon,
@@ -132,27 +170,98 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
       "path": "./rules/Emby.list"
     },
-    "ProxyGFW": {
+    "Spotify": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rules/ProxyGFW.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Spotify.list",
+      "path": "./rules/Spotify.list"
+    },
+    "Bahamut": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Bahamut.list",
+      "path": "./rules/Bahamut.list"
+    },
+    "Netflix": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Netflix.list",
+      "path": "./rules/Netflix.list"
+    },
+    "Disney": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
+      "path": "./rules/Disney.list"
+    },
+    "PrimeVideo": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/PrimeVideo.list",
+      "path": "./rules/PrimeVideo.list"
+    },
+    "HBO": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/HBO.list",
+      "path": "./rules/HBO.list"
+    },
+    "OneDrive": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list",
+      "path": "./rules/OneDrive.list"
+    },
+    "Github": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
+      "path": "./rules/Github.list"
+    },
+    "Microsoft": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list",
+      "path": "./rules/Microsoft.list"
     },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
       "path": "./rules/Lan.list"
+    },
+    "ProxyGFW": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
+      "path": "./rules/ProxyGFW.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
+    "RULE-SET,AD,REJECT",
+    "RULE-SET,AI,Proxy",
+    "RULE-SET,Apple,DIRECT",
+    "RULE-SET,YouTube,Media",
+    "RULE-SET,Google,Proxy",
     "RULE-SET,Telegram,Chat",
-    "RULE-SET,Emby,Emby",
+    "RULE-SET,Twitter,Proxy",
+    "RULE-SET,Steam,DIRECT",
+    "RULE-SET,Epic,DIRECT",
+    "RULE-SET,Emby,Proxy",
+    "RULE-SET,Spotify,Proxy",
+    "RULE-SET,Bahamut,Media",
+    "RULE-SET,Netflix,Media",
+    "RULE-SET,Disney,Media",
+    "RULE-SET,PrimeVideo,Media",
+    "RULE-SET,HBO,Media",
+    "GEOSITE,onedrive,Proxy",
+    "GEOSITE,github,Proxy",
+    "GEOSITE,microsoft,DIRECT",
     "GEOSITE,gfw,Proxy",
-    "GEOIP,lan,DIRECT",
-    "GEOIP,CN,DIRECT",
+    "GEOIP,private,DIRECT",
+    "GEOIP,cn,DIRECT",
     "MATCH,Proxy"
   ];
 
