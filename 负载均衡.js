@@ -191,6 +191,7 @@ function main(config) {
   };
 
   // 覆盖规则
+  config["rules"] = [
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
     "RULE-SET,Telegram,Chat",
