@@ -177,7 +177,6 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Telegram.list"
-      "path": "./rules/Telegram.list"
     },
     "Emby": {
       ...ruleProviderCommon,
