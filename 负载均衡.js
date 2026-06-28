@@ -1,8 +1,9 @@
 // 参考 Verge Rev 示例 Script 配置
 //
-// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 0.5.8)
+// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
 //
-// 最后更新时间: 2024-10-14 19:00
+// 最后更新时间: 2026-6-21 13:00
+
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -14,7 +15,7 @@ const ruleProviderCommon = {
 // 策略组通用配置
 const groupBaseOption = {
   "interval": 300,
-  "url": "http://detectportal.firefox.com/success.txt",
+  "url": "http://1.1.1.1/generate_204",
   "max-failed-times": 3,
 };
 
@@ -34,8 +35,6 @@ function main(config) {
   config["ipv6"] = false;
   config["log-level"] = "info";
   config["unified-delay"] = "true";
-  config["find-process-mode"] = "strict";
-  config["global-client-fingerprint"] = "chrome";
 
   // 覆盖 dns 配置
   config["dns"] = {
@@ -44,17 +43,17 @@ function main(config) {
     "ipv6": false,
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
-    "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
-    "nameserver": ["223.5.5.5", "119.29.29.29", "180.184.1.1"]
+    "fake-ip-filter": ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn', '+.msftconnecttest.com', '+.msftncsi.com', 'lancache.steamcontent.com'],
+    "nameserver": ["223.5.5.5", "119.29.29.29"]
   };
 
   // 覆盖 geodata 配置
   config["geodata-mode"] = true;
   config["geox-url"] = {
-    "geoip": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
-    "geosite": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-    "mmdb": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
-    "asn": "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+    "geoip": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat",
+    "geosite": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+    "mmdb": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb",
+    "asn": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb"
   };
 
   // 覆盖 sniffer 配置
@@ -87,73 +86,120 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Proxy",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(港|HK|hk|Hong Kong|HongKong|hongkong)",
-      "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
+      "type": "select",
+      "proxies": ["HK", "SG", "JP", "US"],
+      "include-all": true
     },
     {
       ...groupBaseOption,
       "name": "Chat",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(新加坡|坡|狮城|SG|Singapore)",
-      "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
+      "type": "select",
+      "proxies": ["HK", "SG", "JP", "US"],
+      "include-all": true
+    },
+    {
+      ...groupBaseOption,
+      "name": "Crypto",
+      "type": "select",
+      "proxies": ["HK", "SG", "JP", "US"],
+      "include-all": true
     },
     {
       ...groupBaseOption,
       "name": "Emby",
       "type": "select",
-      "proxies": ["DIRECT", "Proxy"],
-      "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Bili.png"
+      "proxies": ["HK", "SG", "JP", "US"],
+      "include-all": true
+    // 地区分组
     },
     {
       ...groupBaseOption,
-      "name": "GLOBAL",
-      "type": "select",
-      "proxies": ["DIRECT", "REJECT"],
+      "name": "HK",
+      "type": "load-balance",
+      "tolerance": 0,
       "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Static.png"
+      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "SG",
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "JP",
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "US",
+      "type": "load-balance",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"
     } 
   ];
 
   // 覆盖规则集
   config["rule-providers"] = {
+    "Direct": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/DIRECT.list"
+    },
+    "Lan": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Lan.list"
+    },
+    "Reject": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
+    },
+    "Crypto": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Crypto/Crypto.list"
+    },
+    "Crypto1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Crypto.list"
+    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Telegram.list"
       "path": "./rules/Telegram.list"
     },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-      "path": "./rules/Emby.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list"
     },
-    "ProxyGFW": {
+    "Proxy": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rules/ProxyGFW.list"
-    },
-    "Lan": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rules/Lan.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list"
     }
   };
 
   // 覆盖规则
-  config["rules"] = [
+    "RULE-SET,Direct,DIRECT",
+    "RULE-SET,Reject,REJECT",
     "RULE-SET,Telegram,Chat",
+    "RULE-SET,Crypto,Crypto",
+    "RULE-SET,Crypto1,Crypto",
     "RULE-SET,Emby,Emby",
-    "GEOSITE,gfw,Proxy",
-    "GEOIP,lan,DIRECT",
+    "RULE-SET,Proxy,Proxy",
+    "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
   ];
