@@ -115,11 +115,6 @@ function main(config) {
 
   // 覆盖规则集
   config["rule-providers"] = {
-    "Direct": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/DIRECT.list"
-    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -169,7 +164,6 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
     "RULE-SET,Github,Proxy",
     "RULE-SET,Telegram,Chat",
