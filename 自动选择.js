@@ -86,63 +86,38 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Proxy",
-      "type": "select",
-      "proxies": ["HK", "SG", "JP", "US"],
-      "include-all": true
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
     },
     {
       ...groupBaseOption,
       "name": "Chat",
-      "type": "select",
-      "proxies": ["HK", "SG", "JP", "US"],
-      "include-all": true
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
     },
     {
       ...groupBaseOption,
       "name": "Crypto",
-      "type": "select",
-      "proxies": ["HK", "SG", "JP", "US"],
-      "include-all": true
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Final.png" 
     },
     {
       ...groupBaseOption,
       "name": "Emby",
-      "type": "select",
-      "proxies": ["HK", "SG", "JP", "US"],
-      "include-all": true
-    // 地区分组
-    },
-    {
-      ...groupBaseOption,
-      "name": "HK",
-      "type": "load-balance",
+      "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"
-    },
-    {
-      ...groupBaseOption,
-      "name": "SG",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
-    },
-    {
-      ...groupBaseOption,
-      "name": "JP",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
-    },
-    {
-      ...groupBaseOption,
-      "name": "US",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"
+      "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)",
+      "icon": "https://github.com/Orz-3/face/raw/master/Bili.png" 
     } 
   ];
 
@@ -151,32 +126,42 @@ function main(config) {
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Lan.list"
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
     },
     "Reject": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
     },
-    "Crypto": {
+    "Github": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Crypto/Crypto.list"
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list"
     },
-    "Crypto1": {
+    "Crypto": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Crypto.list"
     },
+    "Crypto1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Crypto/Crypto.list"
+    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Telegram.list"
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Telegram.list"
     },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list"
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Emby.list"
+    },
+    "Emby1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list"
     },
     "Proxy": {
       ...ruleProviderCommon,
@@ -188,10 +173,12 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Reject,REJECT",
+    "RULE-SET,Github,Proxy",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
     "RULE-SET,Emby,Emby",
+    "RULE-SET,Emby1,Emby",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
@@ -200,4 +187,4 @@ function main(config) {
 
   // 返回修改后的配置
   return config;
-}
+} 
