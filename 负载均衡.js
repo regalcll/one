@@ -109,15 +109,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
       "icon": "https://github.com/Orz-3/face/raw/master/Final.png" 
-    },
-    {
-      ...groupBaseOption,
-      "name": "Emby",
-      "type": "load-balance",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)",
-      "icon": "https://github.com/Orz-3/face/raw/master/Bili.png" 
     } 
   ];
 
@@ -177,8 +168,8 @@ function main(config) {
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Emby",
-    "RULE-SET,Emby1,Emby",
+    "RULE-SET,Emby,Crypto",
+    "RULE-SET,Emby1,Crypto",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
