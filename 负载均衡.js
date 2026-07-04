@@ -86,7 +86,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Proxy",
-      "type": "url-test",
+      "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
@@ -95,7 +95,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Chat",
-      "type": "url-test",
+      "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
@@ -104,7 +104,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Crypto",
-      "type": "url-test",
+      "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
@@ -113,7 +113,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Emby",
-      "type": "url-test",
+      "type": "load-balance",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)",
