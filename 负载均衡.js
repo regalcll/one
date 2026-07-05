@@ -119,16 +119,6 @@ function main(config) {
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
     },
-    "Reject": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
-    },
-    "Github": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list"
-    },
     "Crypto": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -143,34 +133,14 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Telegram.list"
-    },
-    "Emby": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Emby.list"
-    },
-    "Emby1": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list"
-    },
-    "Proxy": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,Reject,REJECT",
-    "RULE-SET,Github,Proxy",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Crypto",
-    "RULE-SET,Emby1,Crypto",
-    "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
