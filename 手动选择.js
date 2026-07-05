@@ -132,7 +132,6 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,Reject,REJECT",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
