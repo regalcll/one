@@ -87,6 +87,139 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxy",
       "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Chat",
+      "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Crypto",
+      "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Emby",
+      "type": "select",
+      "include-all": true,
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    // 地区分组
+    {
+      ...groupBaseOption,
+      "name": "HongKong",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Singapore",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Japan",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Taiwan",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"
+    } 
+  ];
+
+  // 覆盖规则集
+  config["rule-providers"] = {
+    "Direct": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Direct.list"
+    },
+    "Lan": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Lan.list"
+    },
+    "Reject": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Reject.list"
+    },
+    "Crypto": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Crypto.list"
+    },
+    "Crypto1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@refs/heads/master/rule/Clash/Crypto/Crypto.list"
+    },
+    "Emby": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Emby.list"
+    },
+    "Emby1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/regalcll/one@refs/heads/master/Emby1.list"
+    },
+    "Telegram": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Telegram.list"
+    },
+    "Proxy": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Proxy.list"
+    }
+  };
+
+  // 覆盖规则
+  config["rules"] = [
+    "RULE-SET,Direct,DIRECT",
+    "RULE-SET,Reject,REJECT",
+    "RULE-SET,Telegram,Chat",
+    "RULE-SET,Crypto,Crypto",
+    "RULE-SET,Crypto1,Crypto",
+    "RULE-SET,Emby,Emby",
+    "RULE-SET,Emby1,Emby",
+    "RULE-SET,Proxy,Proxy",
+    "RULE-SET,Lan,DIRECT",
+    "GEOIP,CN,DIRECT",
+    "MATCH,Proxy"
+  ];
+
+  // 返回修改后的配置
+  return config;
+}     "enable": true,
+    "stack": "mixed",
+    "dns-hijack": ["any:53"]
+  };
+
+  // 覆盖策略组
+  config["proxy-groups"] = [
+    {
+      ...groupBaseOption,
+      "name": "Proxy",
+      "type": "select",
       "proxies": ["HongKong", "United States", "Singapore", "Japan", "Taiwan"]
     },
     {
