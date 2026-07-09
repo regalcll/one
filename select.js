@@ -87,31 +87,49 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxy",
       "type": "select",
-      "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Global.png"
+      "include-all": true
     },
     {
       ...groupBaseOption,
       "name": "Chat",
       "type": "select",
-      "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Scholar.png"
+      "include-all": true
     },
     {
       ...groupBaseOption,
       "name": "Crypto",
       "type": "select",
-      "include-all": true,
-      "icon": "https://github.com/Orz-3/face/raw/master/Final.png" 
+      "include-all": true
+    },
+    {
+      ...groupBaseOption,
+      "name": "Github",
+      "type": "select",
+      "include-all": true
     } 
   ];
 
   // 覆盖规则集
   config["rule-providers"] = {
+    "Direct": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/DIRECT.list"
+    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
+    },
+    "Reject": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
+    },
+    "Github": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list"
     },
     "Crypto": {
       ...ruleProviderCommon,
@@ -127,14 +145,23 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Telegram.list"
+    },
+    "Proxy": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
+    "RULE-SET,Direct,DIRECT",
+    "RULE-SET,Reject,REJECT",
+    "RULE-SET,Github,Github",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
+    "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
