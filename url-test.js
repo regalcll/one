@@ -86,7 +86,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Proxy",
-      "type": "load-balance",
+      "type": "url-test",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
@@ -95,7 +95,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Chat",
-      "type": "load-balance",
+      "type": "url-test",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
@@ -104,7 +104,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "Crypto",
-      "type": "load-balance",
+      "type": "url-test",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
