@@ -105,6 +105,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Emby",
       "type": "select",
+      "include-all": true,
       "proxies": ["HongKong", "United States", "Singapore", "Japan", "Taiwan"]
     },
     {
