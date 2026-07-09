@@ -139,7 +139,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"
+      "filter": "(🇨🇳)|(台)|(Tai)|(TW)"
     } 
   ];
 
