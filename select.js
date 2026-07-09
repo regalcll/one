@@ -103,6 +103,12 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Emby",
+      "type": "select",
+      "include-all": true
+    },
+    {
+      ...groupBaseOption,
       "name": "Github",
       "type": "select",
       "include-all": true
@@ -141,6 +147,16 @@ function main(config) {
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Crypto/Crypto.list"
     },
+    "Emby": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list"
+    },
+    "Emby1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list"
+    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -161,6 +177,8 @@ function main(config) {
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
+    "RULE-SET,Emby,Emby",
+    "RULE-SET,Emby1,Emby",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
