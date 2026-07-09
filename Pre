@@ -1,91 +1,212 @@
-# Author:https://github.com/Repcz
-# TG:https://t.me/@LUCYChannel_1024
-# 最后更新时间: 2026-6-28 20:30
-#
-# Mihomo Version ≥ 1.19.23
-# 官方文档: https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
-#
-# 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
-#
-# ================
+// 参考 Verge Rev 示例 Script 配置
+//
+// Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
+//
+// 最后更新时间: 2026-6-21 13:00
 
-p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://1.1.1.1/generate_204, interval: 1800, timeout: 5000}}
-proxy-providers:
-  Subscribe: # 在此将 "http://your-service-provider" 替换为你的机场订阅，推荐使用 base64 或者 node list
-    url: http://your-service-provider
-    <<: *p
-    #override: # 修改节点前后缀时，需移除前方的 "#" 符号
-      #additional-prefix: "节点前缀"
-      #additional-suffix: "节点后缀"
-  #Subscribe2: {url: http://your-service-provider, <<: *p}
-  #Subscribe3: {url: http://your-service-provider, <<: *p}
-  #Subscribe4: {url: http://your-service-provider, <<: *p}
 
-mixed-port: 7893
-tcp-concurrent: true
-allow-lan: true
-ipv6: false
-log-level: info
-unified-delay: true
+// 规则集通用配置
+const ruleProviderCommon = {
+  "type": "http",
+  "format": "text",
+  "interval": 86400
+};
 
-geodata-mode: false
-geox-url:
-  mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-without-asn.mmdb"
+// 策略组通用配置
+const groupBaseOption = {
+  "interval": 300,
+  "url": "http://1.1.1.1/generate_204",
+  "max-failed-times": 3,
+};
 
-profile: { store-selected: true, store-fake-ip: false }
-sniffer: { enable: true, sniff: { HTTP: { ports: [80], override-destination: true }, TLS: { ports: [443, 8443] }, QUIC: { ports: [443, 8443] } } }
+// 程序入口
+function main(config) {
+  const proxyCount = config?.proxies?.length ?? 0;
+  const proxyProviderCount =
+    typeof config?.["proxy-providers"] === "object" ? Object.keys(config["proxy-providers"]).length : 0;
+  if (proxyCount === 0 && proxyProviderCount === 0) {
+    throw new Error("配置文件中未找到任何代理");
+  }
 
-tun:
-  enable: true
-  stack: mixed
-  dns-hijack: [any:53]
-        
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: fake-ip
-  listen: :1053
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter: ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn', '+.msftconnecttest.com', '+.msftncsi.com', 'lancache.steamcontent.com']
-  nameserver: [223.5.5.5, 119.29.29.29]
+  // 覆盖通用配置
+  config["mixed-port"] = "7890";
+  config["tcp-concurrent"] = true;
+  config["allow-lan"] = true;
+  config["ipv6"] = false;
+  config["log-level"] = "info";
+  config["unified-delay"] = "true";
 
-# 锚点参数
-pg: &pg {type: select, proxies: [Manual, HongKong, United States, Singapore, Japan, Taiwan, DIRECT]}
-url-test: &url-test {type: url-test, url: http://1.1.1.1/generate_204, interval: 300, tolerance: 0, include-all: true}
-select: &select {type: select, include-all: true}
-fallback: &fallback {type: fallback, url: http://1.1.1.1/generate_204, interval: 300, include-all: true}
-load-balance: &load-balance {type: load-balance, strategy: consistent-hashing, url: http://1.1.1.1/generate_204, interval: 300, include-all: true}
-c: &c {type: http, behavior: classical, format: text, interval: 86400}
+  // 覆盖 dns 配置
+  config["dns"] = {
+    "enable": true,
+    "listen": "0.0.0.0:1053",
+    "ipv6": false,
+    "enhanced-mode": "fake-ip",
+    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-filter": ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn', '+.msftconnecttest.com', '+.msftncsi.com', 'lancache.steamcontent.com'],
+    "nameserver": ["223.5.5.5", "119.29.29.29"]
+  };
 
-proxy-groups:
+  // 覆盖 geodata 配置
+  config["geodata-mode"] = true;
+  config["geox-url"] = {
+    "geoip": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat",
+    "geosite": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+    "mmdb": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb",
+    "asn": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb"
+  };
 
-  - {name: Proxy, <<: *select, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
-  - {name: Chat, <<: *select, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
-  - {name: Emby, <<: *select, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
-  - {name: Crypto, <<: *select, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
+  // 覆盖 sniffer 配置
+  config["sniffer"] = {
+    "enable": true,
+    "parse-pure-ip": true,
+    "sniff": {
+      "TLS": {
+        "ports": ["443", "8443"]
+      },
+      "HTTP": {
+        "ports": ["80", "8080-8880"],
+        "override-destination": true
+      },
+      "QUIC": {
+        "ports": ["443", "8443"]
+      }
+    }
+  };
 
-rule-providers:
+  // 覆盖 tun 配置
+  config["tun"] = {
+    "enable": true,
+    "stack": "mixed",
+    "dns-hijack": ["any:53"]
+  };
 
-  Direct: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Direct.list}
-  Lan: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Lan.list}
-  Reject: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list}
-  Telegram: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Telegram.list}
-  Emby: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list}
-  Emby1: {<<: *c, url: https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list}
-  Crypto: {<<: *c, url: https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Crypto.list}
-  Crypto1: {<<: *c, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Crypto/Crypto.list}
-  Proxy: {<<: *c, url: https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list}
+  // 覆盖策略组
+  config["proxy-groups"] = [
+    {
+      ...groupBaseOption,
+      "name": "Proxy",
+      "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Chat",
+      "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Crypto",
+      "type": "select",
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    {
+      ...groupBaseOption,
+      "name": "Emby",
+      "type": "select",
+      "include-all": true,
+      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+    },
+    // 地区分组
+    {
+      ...groupBaseOption,
+      "name": "HongKong",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Singapore",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Japan",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Taiwan",
+      "type": "url-test",
+      "tolerance": 0,
+      "include-all": true,
+      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"
+    } 
+  ];
 
-rules:
+  // 覆盖规则集
+  config["rule-providers"] = {
+    "Direct": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Direct.list"
+    },
+    "Lan": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
+    },
+    "Reject": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
+    },
+    "Crypto": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Crypto.list"
+    },
+    "Crypto1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Crypto/Crypto.list"
+    },
+    "Emby": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list"
+    },
+    "Emby1": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list"
+    },
+    "Telegram": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Telegram.list"
+    },
+    "Proxy": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list"
+    }
+  };
 
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,Reject,REJECT
-  - RULE-SET,Telegram,Chat
-  - RULE-SET,Emby,Emby
-  - RULE-SET,Emby1,Emby
-  - RULE-SET,Crypto,Crypto
-  - RULE-SET,Crypto1,Crypto
-  - RULE-SET,Proxy,Proxy
-  - RULE-SET,Lan,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxy
+  // 覆盖规则
+  config["rules"] = [
+    "RULE-SET,Direct,DIRECT",
+    "RULE-SET,Reject,REJECT",
+    "RULE-SET,Telegram,Chat",
+    "RULE-SET,Crypto,Crypto",
+    "RULE-SET,Crypto1,Crypto",
+    "RULE-SET,Emby,Emby",
+    "RULE-SET,Emby1,Emby",
+    "RULE-SET,Proxy,Proxy",
+    "RULE-SET,Lan,DIRECT",
+    "GEOIP,CN,DIRECT",
+    "MATCH,Proxy"
+  ];
+
+  // 返回修改后的配置
+  return config;
+} 
