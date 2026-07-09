@@ -119,6 +119,11 @@ function main(config) {
       "behavior": "classical",
       "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
     },
+    "Github": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list"
+    },
     "Crypto": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -139,6 +144,7 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
     "RULE-SET,Telegram,Chat",
+    "RULE-SET,Github,Crypto",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
     "RULE-SET,Lan,DIRECT",
