@@ -114,7 +114,7 @@ function main(config) {
     "Direct": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/DIRECT.list"
+      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Direct.list"
     },
     "Lan": {
       ...ruleProviderCommon,
