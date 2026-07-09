@@ -2,7 +2,7 @@
 //
 // Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
 //
-// 最后更新时间: 2026-6-21 13:00
+// 最后更新时间: 2026-07-10 00:00
 
 
 // 规则集通用配置
@@ -50,10 +50,10 @@ function main(config) {
   // 覆盖 geodata 配置
   config["geodata-mode"] = true;
   config["geox-url"] = {
-    "geoip": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat",
-    "geosite": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-    "mmdb": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb",
-    "asn": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb"
+    "geoip": "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
+    "geosite": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@releases/download/latest/geosite.dat",
+    "mmdb": "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb",
+    "asn": "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
   };
 
   // 覆盖 sniffer 配置
@@ -106,12 +106,6 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true
-    },
-    {
-      ...groupBaseOption,
-      "name": "Github",
-      "type": "select",
-      "include-all": true
     } 
   ];
 
@@ -120,52 +114,47 @@ function main(config) {
     "Direct": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Direct.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Direct.list"
     },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Lan.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Lan.list"
     },
     "Reject": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Reject.list"
-    },
-    "Github": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Github.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Reject.list"
     },
     "Crypto": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Crypto.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Crypto.list"
     },
     "Crypto1": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Crypto/Crypto.list"
+      "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@refs/heads/master/rule/Clash/Crypto/Crypto.list"
     },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Emby.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Emby.list"
     },
     "Emby1": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/regalcll/one/refs/heads/master/Emby1.list"
+      "url": "https://cdn.jsdelivr.net/gh/regalcll/one@refs/heads/master/Emby1.list"
     },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/Telegram.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Telegram.list"
     },
     "Proxy": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/mihomo/Rules/Proxy.list"
+      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Proxy.list"
     }
   };
 
@@ -173,7 +162,6 @@ function main(config) {
   config["rules"] = [
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
-    "RULE-SET,Github,Github",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
