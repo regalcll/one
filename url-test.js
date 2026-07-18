@@ -87,26 +87,13 @@ function main(config) {
       ...groupBaseOption,
       "name": "Proxy",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
-    },
-    {
-      ...groupBaseOption,
-      "name": "Chat",
-      "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+      "proxies": ["HongKong", "Japan"]
     },
     {
       ...groupBaseOption,
       "name": "Crypto",
       "type": "select",
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
-    },
-    {
-      ...groupBaseOption,
-      "name": "Emby",
-      "type": "select",
-      "include-all": true,
-      "proxies": ["HongKong", "Singapore", "Japan", "Taiwan"]
+      "proxies": ["HongKong", "Japan"]
     },
     // 地区分组
     {
@@ -119,27 +106,11 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Singapore",
-      "type": "url-test",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
-    },
-    {
-      ...groupBaseOption,
       "name": "Japan",
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Taiwan",
-      "type": "url-test",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(🇨🇳)|(台)|(Tai)|(TW)"
     } 
   ];
 
@@ -196,11 +167,11 @@ function main(config) {
   config["rules"] = [
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
-    "RULE-SET,Telegram,Chat",
+    "RULE-SET,Telegram,Proxy",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Emby",
-    "RULE-SET,Emby1,Emby",
+    "RULE-SET,Emby,Proxy",
+    "RULE-SET,Emby1,Proxy",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
