@@ -94,6 +94,12 @@ function main(config) {
       "name": "Crypto",
       "type": "select",
       "include-all": true
+    },
+    {
+      ...groupBaseOption,
+      "name": "Emby",
+      "type": "select",
+      "include-all": true
     } 
   ];
 
@@ -153,8 +159,8 @@ function main(config) {
     "RULE-SET,Telegram,Proxy",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Proxy",
-    "RULE-SET,Emby1,Proxy",
+    "RULE-SET,Emby,Emby",
+    "RULE-SET,Emby1,Emby",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
