@@ -91,6 +91,12 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Chat",
+      "type": "select",
+      "include-all": true
+    },
+    {
+      ...groupBaseOption,
       "name": "Crypto",
       "type": "select",
       "include-all": true
@@ -156,7 +162,7 @@ function main(config) {
   config["rules"] = [
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
-    "RULE-SET,Telegram,Proxy",
+    "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
     "RULE-SET,Emby,Emby",
