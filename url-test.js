@@ -177,7 +177,7 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
-    ""DOMAIN-SUFFIX,wenjian.de,DIRECT",
+    "DOMAIN-SUFFIX,wenjian.de,DIRECT",
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
     "RULE-SET,Telegram,Chat",
