@@ -101,13 +101,6 @@ function main(config) {
       "type": "select",
       "proxies": ["HongKong", "Singapore", "Japan", "TaiWan"]
     },
-    {
-      ...groupBaseOption,
-      "name": "Emby",
-      "type": "select",
-      "include-all": true,
-      "proxies": ["HongKong", "Singapore", "Japan", "TaiWan"]
-    },
     // 地区分组
     {
       ...groupBaseOption,
@@ -170,16 +163,6 @@ function main(config) {
       "behavior": "classical",
       "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@refs/heads/master/rule/Clash/Crypto/Crypto.list"
     },
-    "Emby": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Emby.list"
-    },
-    "Emby1": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/regalcll/one@refs/heads/master/Emby1.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -194,13 +177,12 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
+    ""DOMAIN-SUFFIX,wenjian.de,DIRECT",
     "RULE-SET,Direct,DIRECT",
     "RULE-SET,Reject,REJECT",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Emby",
-    "RULE-SET,Emby1,Emby",
     "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
