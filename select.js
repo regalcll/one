@@ -100,31 +100,15 @@ function main(config) {
       "name": "Crypto",
       "type": "select",
       "include-all": true
-    },
-    {
-      ...groupBaseOption,
-      "name": "Emby",
-      "type": "select",
-      "include-all": true
     } 
   ];
 
   // 覆盖规则集
   config["rule-providers"] = {
-    "Direct": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Direct.list"
-    },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Lan.list"
-    },
-    "Reject": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Reject.list"
     },
     "Crypto": {
       ...ruleProviderCommon,
@@ -136,38 +120,19 @@ function main(config) {
       "behavior": "classical",
       "url": "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@refs/heads/master/rule/Clash/Crypto/Crypto.list"
     },
-    "Emby": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Emby.list"
-    },
-    "Emby1": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/regalcll/one@refs/heads/master/Emby1.list"
-    },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@refs/heads/X/mihomo/Rules/Telegram.list"
-    },
-    "Proxy": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://cdn.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/Proxy.list"
     }
   };
 
   // 覆盖规则
   config["rules"] = [
-    "RULE-SET,Direct,DIRECT",
-    "RULE-SET,Reject,REJECT",
+    "DOMAIN-SUFFIX,wenjian.de,DIRECT",
     "RULE-SET,Telegram,Chat",
     "RULE-SET,Crypto,Crypto",
     "RULE-SET,Crypto1,Crypto",
-    "RULE-SET,Emby,Emby",
-    "RULE-SET,Emby1,Emby",
-    "RULE-SET,Proxy,Proxy",
     "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,Proxy"
